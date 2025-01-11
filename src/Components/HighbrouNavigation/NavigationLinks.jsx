@@ -8,7 +8,7 @@ const NavigationLinks = [
         path: ""
     },
     {
-        link: "Projects",
+        link: "Projects +",
         sublinks: [
             {
                 link: "Building",
