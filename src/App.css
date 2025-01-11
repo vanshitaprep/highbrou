@@ -21,6 +21,7 @@ span,
 li,
 a {
   font-family: "Barlow", serif;
+  text-decoration: none;
 }
 
 .sectionPadding {

@@ -9,11 +9,11 @@ const HomeRoutes = () => {
     return (
         <>
             <section className="HomeRoutes">
-                <HomePage/>
-                <HomePageAbout/>
-                <AttachBacktext/>
-                <WhatWeDoHome/>
-                <WhyUs/>
+                <HomePage />
+                <HomePageAbout />
+                <AttachBacktext />
+                <WhatWeDoHome />
+                <WhyUs />
             </section>
         </>
     )

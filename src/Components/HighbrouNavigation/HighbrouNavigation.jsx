@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./HighbrouNavigation.css";
 import NavigationLinks from "./NavigationLinks";
 import HighbrouLogo from "./highbrou_logo.webp"
+import { Link } from "react-router-dom";
 const HighbrouNavigation = () => {
     const [scrolling, setScrolling] = useState(false);
 
@@ -29,7 +30,9 @@ const HighbrouNavigation = () => {
                 <div className="AnimatedNavigation">
                     <div className="mainDevideContainer">
                         <div className="LogoContainer">
-                            <img src={HighbrouLogo} alt="" />
+                           <Link to="/">
+                           <img src={HighbrouLogo} alt="" />
+                           </Link>
                         </div>
                         <div className="NavigationLinksContainer">
                             <ul>
@@ -51,7 +54,7 @@ const HighbrouNavigation = () => {
                                                 </ul>
                                             </>
                                         ) : (
-                                            <li href={item.path}>{item.link}</li>
+                                           <Link to={item.path}> <li >{item.link}</li></Link>
                                             
                                         )}
                                     </li>

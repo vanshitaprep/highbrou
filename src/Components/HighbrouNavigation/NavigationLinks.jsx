@@ -1,7 +1,7 @@
 const NavigationLinks = [
     {
         link: "About Us",
-        path: ""
+        path: "/about-us"
     },
     {
         link: "Services",
