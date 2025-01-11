@@ -97,12 +97,13 @@
     top: 100%;
     left: 0;
     background-color: transparent;
+    
     /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px; */
     padding: 10px 0;
     width: 241.3px;
     z-index: 10;
     transition: .5s;
-    transform: translateY(20px);
+    transform: translateY(22px);
 }
 
 /* Dropdown container (projects menu) */
@@ -117,6 +118,7 @@
     background: white;
     margin-top: 11px;
     padding: 20px 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 /* Styling for each dropdown link */
