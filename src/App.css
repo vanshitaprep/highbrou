@@ -4,6 +4,7 @@
 body {
   padding: 0px;
   margin: 0px;
+  /* font-family: "Barlow", serif; */
   font-family: "Poppins", serif;
 }
 
@@ -14,12 +15,14 @@ h4,
 h5,
 h6 {
   font-weight: 400;
+  /* font-family: "Barlow", serif; */
   font-family: "Poppins", serif;
 }
 
 span,
 li,
 a {
+  /* font-family: "Barlow", serif; */
   font-family: "Poppins", serif;
   text-decoration: none;
 }
@@ -31,5 +34,6 @@ a {
 p {
   font-size: 18px;
   color: #20201dbf;
+  /* font-family: "Barlow", serif; */
   font-family: "Poppins", serif;
 }
