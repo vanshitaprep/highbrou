@@ -25,7 +25,7 @@ const WhatWeDoHome = () => {
                 <div className="WhatWeDoCardsContainer">
                     <div className="HeaderContainerWhatWeDo">
                         <span>WHAT WE DO?</span>
-                        <h2>Experience the art of interior design</h2>
+                        <h2>Transforming Ideas Into Structural Excellence</h2>
                     </div>
                     <div className="WhatWeDoHoverableCards">
                         <div>

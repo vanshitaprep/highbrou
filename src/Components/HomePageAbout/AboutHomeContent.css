@@ -25,6 +25,8 @@
     align-items: center;
     margin: 30px 0px;
     font-weight: 600;
+    font-size: 17px;
+    text-transform: uppercase;
 }
 
 .AboutContentContainer span::before {

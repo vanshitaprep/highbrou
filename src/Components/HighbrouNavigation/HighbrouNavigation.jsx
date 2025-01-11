@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./HighbrouNavigation.css";
 import NavigationLinks from "./NavigationLinks";
+import HighbrouLogo from "./highbrou_logo.webp"
 const HighbrouNavigation = () => {
     const [scrolling, setScrolling] = useState(false);
 
@@ -27,7 +28,9 @@ const HighbrouNavigation = () => {
             <section className={`NavigationBarContainer ${scrolling ? "scrolled" : ""}`}>
                 <div className="AnimatedNavigation">
                     <div className="mainDevideContainer">
-                        <div className="LogoContainer">Logo</div>
+                        <div className="LogoContainer">
+                            <img src={HighbrouLogo} alt="" />
+                        </div>
                         <div className="NavigationLinksContainer">
                             <ul>
                                 {NavigationLinks.map((item, index) => (
@@ -38,20 +41,25 @@ const HighbrouNavigation = () => {
                                                 <span>{item.link}</span>
                                                 <ul className="dropdown">
                                                     <div>
-                                                    {item.sublinks.map((subItem, subIndex) => (
-                                                        <li key={subIndex}>
-                                                          {subItem.link}
-                                                        </li>
-                                                    ))}
+                                                        {item.sublinks.map((subItem, subIndex) => (
+                                                            <li key={subIndex}>
+                                                                {subItem.link}
+                                                            </li>
+                                                        ))}
                                                     </div>
+                                                    
                                                 </ul>
                                             </>
                                         ) : (
                                             <li href={item.path}>{item.link}</li>
+                                            
                                         )}
                                     </li>
                                 ))}
                             </ul>
+                            {/* <div>
+                                 <button>Contact Us</button>
+                            </div> */}
                         </div>
                     </div>
                 </div>

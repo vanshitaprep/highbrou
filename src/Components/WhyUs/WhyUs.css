@@ -1,6 +1,6 @@
 #WhyUsContainer {
     background-color: rgb(13, 42, 59);
-    /* max-height: 900px; */
+    max-height: 800px;
     overflow: hidden;
     color: white;
 }

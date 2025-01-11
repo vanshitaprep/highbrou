@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./HomePage.css";
 import { Row, Col } from "antd";
 import { FaArrowRightLong } from "react-icons/fa6";
+import CarousalImage1 from "./CarousalImage1.jpeg"
+import CarousalImage2 from "./CarousalImage2.jpeg"
 const images = [
     "https://plus.unsplash.com/premium_photo-1661335257817-4552acab9656?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1705233844656-d05196a4fa30?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    CarousalImage1,
+    CarousalImage2,
 ];
 const HomePage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
