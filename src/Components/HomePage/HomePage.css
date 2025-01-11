@@ -1,6 +1,6 @@
-.AnimatedHomePageContainer{
+/* .AnimatedHomePageContainer{
     overflow: hidden;
-}
+} */
 .AnimatedHomePageContainer .AnimatedImageContainer {
     max-height: 700px;
     max-width: 100%;
@@ -67,6 +67,8 @@
 
 .ImagesContainer {
     height: 700px;
+    position: relative;
+    overflow: hidden;
 }
 
 .HoverItem {
