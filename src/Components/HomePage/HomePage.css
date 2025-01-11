@@ -9,6 +9,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
 }
 
 .AnimatedImageContainer {
@@ -172,3 +173,15 @@
     padding: 10px;
     border-radius: 50%;
 }
+
+
+
+.carousel-image.visible {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .carousel-image.hidden {
+    opacity: 0;
+    z-index: 0;
+  }

@@ -66,18 +66,12 @@
     transition: .5s;
 }
 
-/* Dropdown container (projects menu) */
-.NavigationLinksContainer ul li:hover .dropdown {
-    opacity: 1 !important;
-    visibility: visible;
-    transform: translateY(0px);
-    transition: .5s;
-}
+
 
 /* Styling for the dropdown */
 .dropdown {
     opacity: 0 !important;
-    visibility: none;
+    visibility: hidden !important;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -91,7 +85,13 @@
     transition: .5s;
     transform: translateY(20px);
 }
-
+/* Dropdown container (projects menu) */
+.NavigationLinksContainer ul li:hover .dropdown {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0px);
+    transition: .5s;
+}
 .dropdown div {
     background: white;
     margin-top: 11px;
