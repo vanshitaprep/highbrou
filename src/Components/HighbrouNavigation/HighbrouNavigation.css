@@ -4,14 +4,17 @@
     position: fixed;
     z-index: 55;
     margin-top: 40px;
-    width: 100%;
+    /* width: 100%; */
     transition: .7s;
+    padding: 0px 120px;
+    right: 0px;
+    left: 0px;
 }
 
 .NavigationBarContainer.scrolled {
     margin-top: 0px;
     transition: .7s;
-
+    padding: 0px 0px;
 }
 
 .NavigationBarContainer.scrolled .AnimatedNavigation {
@@ -23,13 +26,14 @@
 .AnimatedNavigation {
     background: rgba(255, 255, 255, 0.93);
     height: 70px;
-    width: 80%;
+    width: 100%;
     transition: .5s;
     border-radius: 5px;
     backdrop-filter: blur(10px);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
-.NavigationBarContainer.scrolled .mainDevideContainer{
+
+.NavigationBarContainer.scrolled .mainDevideContainer {
     padding: 0px 40px;
     transition: .5s;
 }
@@ -97,7 +101,7 @@
     top: 100%;
     left: 0;
     background-color: transparent;
-    
+
     /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px; */
     padding: 10px 0;
     width: 241.3px;
