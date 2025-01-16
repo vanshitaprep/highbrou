@@ -6,13 +6,16 @@
     justify-content: space-between;
     transition: .5s;
     position: relative;
+    
 }
 
 .AnimatedHoverAnimationTimeline:hover {
     padding: 40px 0px;
     transition: .5s;
+    /* border-radius: 20px; */
 }
-.AnimatedHoverAnimationTimeline::before{
+
+.AnimatedHoverAnimationTimeline::before {
     height: 0px;
     width: 100%;
     position: absolute;
@@ -21,20 +24,24 @@
     display: inline-block;
     transition: .5s;
 }
-.AnimatedHoverAnimationTimeline:hover::before{
-    height:100%;
+
+.AnimatedHoverAnimationTimeline:hover::before {
+    height: 100%;
     width: 100%;
     position: absolute;
     background-color: rgba(226, 226, 226, 0.424);
     content: "";
     display: inline-block;
     transition: .5s;
+    border-radius: 20px;
 }
-.ContentContainerTimeline{
+
+.ContentContainerTimeline {
     position: sticky;
     z-index: 4;
     padding: 0px 20px;
 }
+
 .ContentContainerTimeline h2 {
     color: black;
 }
@@ -82,7 +89,7 @@
     opacity: 0.9;
 }
 
-.TimelineSectionHeading{
+.TimelineSectionHeading {
     color: rgb(13, 42, 59);
     letter-spacing: -1.4px;
     margin-top: 0;
@@ -91,3 +98,58 @@
     font-weight: 500;
     line-height: 107%;
 }
+
+.TimelineImageonPc {
+    width: 100%;
+}
+/* 
+.AbsoluteContainer {
+    position: relative;
+}
+
+.TimelineContentContainer {
+    color: black;
+}
+
+.TimelineContentContainer div:first-child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 10px;
+}
+
+.TimelineContentContainer div:last-child {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.TimelineContentContainer div:nth-child(2) {
+    position: absolute;
+    left: 100px;
+}
+
+.TimelineContentContainer div:nth-child(3) {
+    position: absolute;
+    left: 300px;
+    top: 220px;
+
+}
+
+.TimelineContentContainer div:nth-child(4) {
+    position: absolute;
+    left: 350px;
+    top: -50px;
+}
+
+.TimelineContentContainer div:nth-child(5) {
+    position: absolute;
+    right: 240px;
+    bottom: -30px;
+}
+
+.TimelineContentContainer div:nth-child(6) {
+    position: absolute;
+    right: 60px;
+    top: 0px;
+} */
