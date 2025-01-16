@@ -30,9 +30,9 @@ const HighbrouNavigation = () => {
                 <div className="AnimatedNavigation">
                     <div className="mainDevideContainer">
                         <div className="LogoContainer">
-                           <Link to="/">
-                           <img src={HighbrouLogo} alt="" />
-                           </Link>
+                            <Link to="/">
+                                <img src={HighbrouLogo} alt="" />
+                            </Link>
                         </div>
                         <div className="NavigationLinksContainer">
                             <ul>
@@ -50,12 +50,12 @@ const HighbrouNavigation = () => {
                                                             </li>
                                                         ))}
                                                     </div>
-                                                    
+
                                                 </ul>
                                             </>
                                         ) : (
-                                           <Link to={item.path}> <li >{item.link}</li></Link>
-                                            
+                                            <Link to={item.path}> <li >{item.link}</li></Link>
+
                                         )}
                                     </li>
                                 ))}

@@ -33,6 +33,7 @@
 .HoverableCardImage {
     max-height: 400px;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .HoverableCardImage img {
