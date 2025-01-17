@@ -3,6 +3,8 @@ import CommonTopBannerDynamic from "../CommonTopBanner/CommonTopBannerDynamic";
 import TimeLineAnimatedComponent from "../TimeLineAnimated/TimeLineAnimatedComponent";
 import HighbrouMissionVision from "../MissionVision/HighbrouMissionVision";
 import ValuesandGoals from "../ValuesandGoals/ValuesandGoals";
+import OurTeamFounders from "../OurTeamFounders/OurTeamFounders";
+import HighBrouWorkVideo from "../HighBrouWorkVideo/HightBrouWorkVideo";
 const AboutUs = () => {
     return (
         <>
@@ -15,6 +17,9 @@ const AboutUs = () => {
                 <TimeLineAnimatedComponent/>
                 <HighbrouMissionVision/>
                 <ValuesandGoals/>
+                <HighBrouWorkVideo/>
+                <OurTeamFounders/>
+               
             </section>
         </>
     )
