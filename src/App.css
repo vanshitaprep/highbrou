@@ -37,3 +37,9 @@ p {
   /* font-family: "Barlow", serif; */
   font-family: "Poppins", serif;
 }
+
+@media (min-width:1500px) and (max-width:4000px){
+  .sectionPadding {
+    padding: 80px 200px;
+  }
+}

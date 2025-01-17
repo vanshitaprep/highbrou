@@ -32,8 +32,8 @@
 .taglineContentContainer div h2 {
     text-align: start;
     /* font-size: 60px; */
-    width: 70%;
-    padding: 0px 20px;
+    /* width: 70%; */
+    padding: 0px 0px;
 }
 
 .TopBannerSpanAdjust span {
@@ -43,7 +43,7 @@
     font-weight: 600;
     font-size: 17px;
     text-transform: uppercase;
-    padding: 0px 20px;
+    padding: 0px 0px;
 }
 
 .TopBannerSpanAdjust span::before {

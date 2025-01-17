@@ -163,3 +163,19 @@
     position: fixed !important;
     top: 0px !important;
 } */
+
+
+@media (min-width:1500px) and (max-width:4000px){
+    .NavigationBarContainer {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        z-index: 55;
+        margin-top: 40px;
+        /* width: 100%; */
+        transition: .7s;
+        padding: 0px 200px;
+        right: 0px;
+        left: 0px;
+    }
+}

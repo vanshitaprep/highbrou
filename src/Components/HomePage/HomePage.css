@@ -212,12 +212,43 @@
 /* Keyframes for smooth zoom-in and zoom-out */
 @keyframes zoomInOut {
     0% {
-        transform: scale(1); /* Default scale */
+        transform: scale(1);
+        /* Default scale */
     }
+
     50% {
-        transform: scale(1.1); /* Zoom in */
+        transform: scale(1.1);
+        /* Zoom in */
     }
+
     100% {
-        transform: scale(1); /* Zoom out */
+        transform: scale(1);
+        /* Zoom out */
     }
+}
+
+
+@media (min-width:1500px) and (max-width:4000px) {
+    .headingContainer {
+        position: absolute;
+        bottom: 15%;
+        left: 0px;
+        padding: 0px 200px;
+        /* width: 80%; */
+        z-index: 5;
+
+    }
+
+    .HoverTextPoints {
+        position: absolute;
+        /* width: 80%; */
+        right: 0px;
+        left: 0px;
+        bottom: 50px;
+        display: flex;
+        justify-content: space-around;
+        z-index: 5;
+        padding: 0px 200px;
+    }
+
 }

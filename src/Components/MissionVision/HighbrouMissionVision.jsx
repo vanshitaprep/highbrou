@@ -23,7 +23,7 @@ const HighbrouMissionVision = () => {
                                             </div>
                                             <div className="MissionContentContainer">
                                                 <h2>MISSION</h2>
-                                                <p>Our mission is to deliver world-class structural solutions that address our clients' unique challenges, combining precision engineering with an innovative problem-solving approach. We aim to create sustainable, resilient, and efficient structures that balance design, functionality, and durability</p>
+                                                <p>Our mission is to deliver world-class structural solutions that address our clients' unique challenges, combining precision engineering with an innovative problem-solving approach. We aim to create sustainable, resilient, and efficient structures that balance design, functionality, and durability.</p>
                                             </div>
                                         </div>
                                         <div className="VisionContainer">
