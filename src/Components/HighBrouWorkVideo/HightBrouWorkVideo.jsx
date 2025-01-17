@@ -37,7 +37,7 @@ const HighBrouWorkVideo = () => {
                         className="HighBrouWorkVideo"
                     ></video>
                     <div className="HighBrouQuateContainer">
-                        <div className="HeaderContainer">
+                        <div className="HeaderContainer sectionPadding">
                             <h2>Building Dreams with Precision and Purpose</h2>
                             <button
                                 className={`VideoToggleButton ${isPlaying ? "playing" : "paused"}`}

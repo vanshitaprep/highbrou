@@ -53,19 +53,40 @@
 .VisionIconContainer {
     width: 300px;
     height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     /* background-color: red; */
 }
 
+.MissionIconContainer img,
+.VisionIconContainer img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.MissionContainer:hover .MissionIconContainer img,
+.VisionContainer:hover .VisionIconContainer img {
+    transform: scale(1.1);
+    transition: .5s;
+}
 
 .MissionContainer:hover .MissionContentContainer,
-.VisionContainer:hover .VisionContentContainer{
+.VisionContainer:hover .VisionContentContainer {
     border-left: 0.5px solid rgba(255, 255, 255, 0.805);
     transition: .5s;
 }
+
 .MissionContentContainer,
 .VisionContentContainer {
     border-left: 0.5px solid rgba(255, 255, 255, 0.234);
     padding: 0px 20px;
     width: 100%;
     transition: .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

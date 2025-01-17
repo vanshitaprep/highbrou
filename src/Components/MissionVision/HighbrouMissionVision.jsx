@@ -19,7 +19,7 @@ const HighbrouMissionVision = () => {
                                     <div>
                                         <div className="MissionContainer">
                                             <div className="MissionIconContainer">
-                                                <img src="/Images/Mission.jpeg" alt="" />
+                                                <img src="/Images/fluent_target-arrow-20-filled (1).svg" alt="" />
                                             </div>
                                             <div className="MissionContentContainer">
                                                 <h2>MISSION</h2>
@@ -28,7 +28,7 @@ const HighbrouMissionVision = () => {
                                         </div>
                                         <div className="VisionContainer">
                                             <div className="VisionIconContainer">
-                                                <img src="/Images/Vision.jpeg" alt="" />
+                                                <img src="/Images/humbleicons_bulb (1).svg" alt="" />
                                             </div>
                                             <div className="VisionContentContainer">
                                                 <h2>VISION</h2>

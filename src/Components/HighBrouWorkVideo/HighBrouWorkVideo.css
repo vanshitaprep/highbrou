@@ -34,7 +34,7 @@
 }
 
 .HighBrouQuateContainer .HeaderContainer {
-    padding: 60px 80px;
+    /* padding: 80px 80px; */
     display: flex;
     padding-bottom: 30px !important;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.571);
