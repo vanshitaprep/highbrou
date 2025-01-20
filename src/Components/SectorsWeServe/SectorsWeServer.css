@@ -1,0 +1,24 @@
+.sectorsCardsContainer h2 {
+    color: black;
+    padding-top: 100px;
+}
+
+.sectorsCardsContainer {
+    min-height: 300px;
+    border-right: 0.5px solid black;
+    padding: 20px;
+    transition: .5s;
+  
+}
+
+.RowAdjustBorder .ant-row .ant-col:nth-child(1),
+.RowAdjustBorder .ant-row .ant-col:nth-child(2),
+.RowAdjustBorder .ant-row .ant-col:nth-child(3) {
+    border-bottom: 0.5px solid black;
+    transition: .5s;
+}
+
+.sectorsCardsContainer:hover {
+    background-color: rgba(226, 226, 226, 0.424);
+    transition: .5s;
+}

@@ -5,7 +5,7 @@ const NavigationLinks = [
     },
     {
         link: "Services",
-        path: ""
+        path: "/services"
     },
     {
         link: "Projects +",

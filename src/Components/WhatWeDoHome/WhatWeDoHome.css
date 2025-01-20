@@ -41,26 +41,31 @@
     height: 100%;
     transition: .5s;
 }
-.WhatWeDoHoverableCards{
+
+.WhatWeDoHoverableCards {
     margin-top: 60px;
 }
 
 .WhatWeDoHoverableCards .ant-row .ant-col {
     padding-right: 30px;
 }
-.HoverableCardContent{
+
+.HoverableCardContent {
     padding: 30px 0px;
     padding-bottom: 15px !important;
 }
-.HoverableCardContent h2{
+
+.HoverableCardContent h2 {
     font-weight: 500;
     margin-top: 5px;
 }
-.BorderHoverCard{
+
+.BorderHoverCard {
     border-bottom: 1px solid rgba(0, 0, 0, 0.57);
     position: relative;
 }
-.BorderHoverCard hr{
+
+.BorderHoverCard hr {
     position: absolute;
     bottom: 0px;
     width: 20px;
@@ -71,7 +76,8 @@
     bottom: -1.6px;
     transition: .5s;
 }
-.BorderHoverCard:hover hr{
+
+.BorderHoverCard:hover hr {
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -82,7 +88,8 @@
     bottom: -1.6px;
     transition: .5s;
 }
-.BorderHoverCard:hover .HoverableCardImage img{
+
+.BorderHoverCard:hover .HoverableCardImage img {
     transform: scale(1.1);
     transition: .5s;
 }
