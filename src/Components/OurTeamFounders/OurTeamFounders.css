@@ -42,9 +42,6 @@
     border-radius: 20px;
 }
 
-.FoundersAnimatedCards .ant-row .ant-col:nth-child(2) .FounderAnimatedCard:last-child {
-    margin-top: 80px;
-}
 
 .FoundersAnimatedCards .FounderAnimatedCard img {
     width: 100%;
@@ -156,4 +153,29 @@
         align-items: center;
         justify-content: center;
     } 
+}
+
+@media (max-width:900px){
+    .FoundersAnimatedCards .ant-row .ant-col{
+        padding: 20px 0px;
+    }
+    .FounderAnimatedCard {
+        position: relative;
+        overflow: hidden;
+        margin: 0px;
+        height: 100%;
+        border-radius: 20px;
+    }
+
+.OurTeamFoundersContentHeader h2 {
+    color: rgb(13, 42, 59);
+    letter-spacing: -1.4px;
+    margin-top: 0;
+    margin-bottom: 26px;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 107%;
+    margin-top: 10px;
+}
+    
 }

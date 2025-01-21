@@ -252,3 +252,33 @@
     }
 
 }
+
+@media (max-width:900px){
+    .headingContainer h1 {
+        text-align: start;
+        font-size: 30px;
+        width: 70%;
+        /* padding: 0px 20px; */
+    }
+    
+    .headingContainer {
+        position: absolute;
+        bottom: 40%;
+        left: 0px;
+        padding: 0px 10px;
+        /* width: 80%; */
+        z-index: 5;
+    
+    }
+    .HoverTextPoints {
+        position: absolute;
+        /* width: 80%; */
+        right: 0px;
+        left: 0px;
+        bottom: 50px;
+        display: flex;
+        justify-content: space-around;
+        z-index: 5;
+        padding: 0px 10px;
+    }
+}

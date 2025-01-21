@@ -90,3 +90,59 @@
     flex-direction: column;
     justify-content: center;
 }
+
+@media (max-width:900px) {
+    .MissionContentContainer,
+.VisionContentContainer {
+    border-left: 0.5px solid transparent;
+    padding: 0px 0px;
+    width: 100%;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.MissionContainer:hover .MissionContentContainer,
+.VisionContainer:hover .VisionContentContainer {
+    border-left: 0.5px solid transparent;
+    transition: .5s;
+}
+
+    .MissionContainer.MissionContentContainer,
+    .VisionContainer .VisionContentContainer {
+        border-left: 0.5px solid transparent;
+        transition: .5s;
+    }
+
+    .MissionContainer,
+    .VisionContainer {
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.234);
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+
+    }
+
+    .MissionIconContainer,
+    .VisionIconContainer {
+        width: 300px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* background-color: red; */
+    }
+
+    .MissionVisionPageTaglineHeading h2 {
+        color: white;
+        letter-spacing: -1.4px;
+        margin-top: 0;
+        margin-bottom: 26px;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 107%;
+    }
+}

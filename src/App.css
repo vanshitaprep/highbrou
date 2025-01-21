@@ -43,3 +43,10 @@ p {
     padding: 80px 200px;
   }
 }
+
+@media (max-width:900px){
+  .sectionPadding {
+    padding: 80px 10px;
+  }
+  
+}

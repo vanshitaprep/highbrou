@@ -46,6 +46,10 @@ const NavigationLinks = [
         path: ""
     },
     {
+link:"Our Approch",
+path:""
+    },
+    {
         link: "Career",
         path: ""
     },

@@ -42,7 +42,7 @@ const HomePage = () => {
                         </div>
                         <div className="HoverTextPoints">
                             <Row style={{ width: "100%" }}>
-                                <Col lg={6} md={12}>
+                                <Col lg={6} md={12} style={{width:"100%"}}>
                                     <div className="HoverItem">
                                         <div>
                                             <h4>CUTTING EDGE DESIGN</h4>
@@ -54,7 +54,7 @@ const HomePage = () => {
                                         <hr />
                                     </div>
                                 </Col>
-                                <Col lg={6} md={12}>
+                                <Col lg={6} md={12} style={{width:"100%"}}>
 
                                     <div className="HoverItem">
                                         <h4>PECISION ENGINEERING</h4>
@@ -65,7 +65,7 @@ const HomePage = () => {
                                         <hr />
                                     </div>
                                 </Col>
-                                <Col lg={6} md={12}>
+                                <Col lg={6} md={12} style={{width:"100%"}}>
                                     <div className="HoverItem">
                                         <h4>SUSTAINABLE SOLUTIONS</h4>
                                         <FaArrowRightLong />
@@ -75,7 +75,7 @@ const HomePage = () => {
                                         <hr />
                                     </div>
                                 </Col>
-                                <Col lg={6} md={12}>
+                                <Col lg={6} md={12} style={{width:"100%"}}>
                                     <div className="HoverItem">
                                         <h4>RAPID DELIVERY </h4>
                                         <FaArrowRightLong />

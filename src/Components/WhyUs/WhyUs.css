@@ -61,3 +61,15 @@
     width: 100%;
     object-fit: cover;
 }
+
+@media (max-width:900px){
+    #WhyUsContainer {
+        background-color: rgb(13, 42, 59);
+        max-height: 100% !important;
+        overflow: hidden;
+        color: white;
+    }
+    .CounterContainerWhyUs .ant-row .ant-col{
+        width: 50%;
+    }
+}
