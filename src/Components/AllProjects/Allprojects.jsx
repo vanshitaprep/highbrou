@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CommonTopBannerDynamic from "../CommonTopBanner/CommonTopBannerDynamic";
 import "./ProjectsPage.css"
 import { Row, Col } from "antd";
@@ -6,6 +6,10 @@ import ProjectsData from "./ProjectsData";
 import NavigationLinks from "../HighbrouNavigation/NavigationLinks";
 const AllProjects = () => {
     const projectCategory = NavigationLinks.find(link => link.link === "Projects +");
+    useEffect(() => {
+        // Scroll to the top of the page when the component is mounted
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <>

@@ -5,7 +5,7 @@ import highbrou_logo from "./FooterWhiteLogo.png"
 import FooterBackOverlayImage from "./FooterBackOverlayImage.png"
 import NavigationLinks from "../HighbrouNavigation/NavigationLinks";
 import { IoLocationSharp } from "react-icons/io5";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <>
@@ -29,7 +29,7 @@ const Footer = () => {
                                     <Row>
                                         {NavigationLinks.map((item, index) => (
                                             <Col lg={12}>
-                                                <p key={index}>{item.link}</p>
+                                                <p key={index}><Link to={item.path}>{item.link}</Link></p>
                                             </Col>
                                         ))}
                                     </Row>
@@ -45,8 +45,8 @@ const Footer = () => {
                                                     <p>Head Office : 204, Damji shamji Udyog Bhavan, Andheri west, Mumbai 400047.</p>
                                                 </div>
                                                 <div className="OfficeAddressContainer">
-                                                {/* <IoLocationSharp/> */}
-                                                <p>Registered Office: 8-8-252, New Rashidpura N10, CIDCO, Aurangabad 431003.</p>
+                                                    {/* <IoLocationSharp/> */}
+                                                    <p>Registered Office: 8-8-252, New Rashidpura N10, CIDCO, Aurangabad 431003.</p>
                                                 </div>
                                             </div>
                                         </Col>
@@ -57,7 +57,12 @@ const Footer = () => {
                                 </div>
                             </Col>
                         </Row>
+                        <div className="CopywriteText">
+                            <p>@2025 <Link to="https://www.outleadsolutions.com/" target="_blank"><b>OutLead Solutions</b></Link>. All rights reserved.</p>
+                            <p>Call: <Link to="tel:+91-9579307313">+91-9579307313.</Link></p>
+                        </div>
                     </div>
+
                 </div>
             </section>
         </>

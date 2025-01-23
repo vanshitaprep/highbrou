@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import CommonTopBannerDynamic from "../CommonTopBanner/CommonTopBannerDynamic";
 import { Row, Col } from "antd";
 import WhatWeDoCardsData from "../WhatWeDoHome/WhatWeDoData";
@@ -11,6 +11,10 @@ const Services = () => {
     const handleHover = (img) => {
         setActiveImage(img); // Update background image on hover
     };
+    useEffect(() => {
+        // Scroll to the top of the page when the component is mounted
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <>

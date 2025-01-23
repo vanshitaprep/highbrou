@@ -76,6 +76,10 @@
     color: rgb(13, 42, 59);
 }
 
+
+.NavigationLinksContainer ul li a:hover{
+    color: #2989BC;
+}
 .NavigationLinksContainer ul li::before {
     opacity: 0;
     transition: .5s;

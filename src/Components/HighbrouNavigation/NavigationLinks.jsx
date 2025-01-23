@@ -43,7 +43,7 @@ const NavigationLinks = [
                 path: "/allprojects"
             }
         ],
-        path: ""
+        path: "/allprojects"
     },
     {
         link: "Our Approach",
