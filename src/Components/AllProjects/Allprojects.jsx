@@ -13,7 +13,7 @@ const AllProjects = () => {
                 <CommonTopBannerDynamic
                     heading="Our Projects"
                     subheading="Our Works, Our Standards"
-                    image="https://images.unsplash.com/photo-1705233844148-c554578cb64b?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image="https://img.freepik.com/free-photo/construction-site-silhouettes_1127-2990.jpg?t=st=1737616296~exp=1737619896~hmac=540a3debb5585273f0e4171b9ba7ba2d8368d09280cd4a146b3ec8ce03f20446&w=1800"
                 />
                 <div>
                     <div className="sectionPadding">

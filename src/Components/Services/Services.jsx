@@ -18,7 +18,7 @@ const Services = () => {
                 <CommonTopBannerDynamic
                     heading="Services"
                     subheading="High Standards, Innovative Solutions"
-                    image="https://images.unsplash.com/photo-1705233844148-c554578cb64b?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image="https://img.freepik.com/free-photo/construction-silhouette_1127-2991.jpg?t=st=1737616348~exp=1737619948~hmac=6179e21b22c8ea115707f24b48bcad8ace8f1d993a804402dac214ea8e7db48a&w=2000"
                 />
                 <div className="sectionPadding" style={{ paddingBottom: "0px" }}>
                     <div>
