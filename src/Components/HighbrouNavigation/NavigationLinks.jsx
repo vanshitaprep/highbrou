@@ -12,42 +12,42 @@ const NavigationLinks = [
         sublinks: [
             {
                 link: "Building",
-                path: ""
+                path: "/allprojects"
             },
             {
                 link: "Hospitality",
-                path: ""
+                path: "/allprojects"
             },
             {
                 link: "Commertial",
-                path: ""
+                path: "/allprojects"
             },
             {
                 link: "Industrial Structures",
-                path: ""
+                path: "/allprojects"
             },
             {
                 link: "Infrastructures",
-                path: ""
+                path: "/allprojects"
             },
             {
                 link: "International Projects",
-                path: ""
+                path: "/allprojects"
             },
             {
                 link: "Facade Design",
-                path: ""
+                path: "/allprojects"
             },
             {
                 link: "From Work",
-                path: ""
+                path: "/allprojects"
             }
         ],
         path: ""
     },
     {
-link:"Our Approch",
-path:""
+        link: "Our Approach",
+        path: ""
     },
     {
         link: "Career",

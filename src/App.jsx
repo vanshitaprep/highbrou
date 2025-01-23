@@ -5,15 +5,17 @@ import HomeRoutes from "./Components/HomeRoutes/HomeRoutes";
 import HighbrouNavigation from "./Components/HighbrouNavigation/HighbrouNavigation";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Services from "./Components/Services/Services";
+import AllProjects from "./Components/AllProjects/Allprojects";
 
 function App() {
   return (
     <Router>
-      <HighbrouNavigation /> 
+      <HighbrouNavigation />
       <Routes>
-        <Route path="/" element={<HomeRoutes />} /> 
-        <Route path="/about-us" element={<AboutUs />} /> 
-        <Route path="/services" element={<Services />} /> 
+        <Route path="/" element={<HomeRoutes />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/allprojects" element={<AllProjects />} />
       </Routes>
     </Router>
   );
