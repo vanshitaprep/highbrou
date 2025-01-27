@@ -206,6 +206,19 @@
     display: flex;
 }
 
+/* .NavPanel{
+    padding: 30px;
+} */
+
+.ant-collapse {
+    background: transparent;
+    border: none;
+}
+
+.ant-collapse .ant-collapse-item {
+    border: none;
+}
+
 /* Mobile View */
 @media (max-width: 768px) {
     .NavigationBarContainer {

@@ -35,6 +35,11 @@ const HighbrouNavigation = () => {
         setIsDrawerOpen(!isDrawerOpen);
     };
 
+    // Handle closing the drawer after selecting a link
+    const handleLinkClick = () => {
+        setIsDrawerOpen(false);
+    };
+
     return (
         <>
             {/* Main Navigation Bar */}
@@ -54,24 +59,28 @@ const HighbrouNavigation = () => {
                                             <>
                                                 <span>{item.link}</span>
                                                 <div className="dropdown">
-                                                <ul >
-                                                    {item.sublinks.map((subItem, subIndex) => (
-                                                        <li key={subIndex}>
-                                                            <Link to={subItem.path}>{subItem.link}</Link>
-                                                        </li>
-                                                    ))}
-                                                </ul>
+                                                    <ul>
+                                                        {item.sublinks.map((subItem, subIndex) => (
+                                                            <li key={subIndex}>
+                                                                <Link to={subItem.path} onClick={handleLinkClick}>
+                                                                    {subItem.link}
+                                                                </Link>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
                                                 </div>
                                             </>
                                         ) : (
-                                            <Link to={item.path}>{item.link}</Link>
+                                            <Link to={item.path} onClick={handleLinkClick}>
+                                                {item.link}
+                                            </Link>
                                         )}
                                     </li>
                                 ))}
                             </ul>
                         </div>
                         <div className="mobileOnly">
-                            <MenuOutlined onClick={toggleDrawer} style={{color:"black"}}/>
+                            <MenuOutlined onClick={toggleDrawer} style={{ color: "black" }} />
                         </div>
                     </div>
                 </div>
@@ -86,25 +95,27 @@ const HighbrouNavigation = () => {
                 className="MobileDrawer"
             >
                 <Collapse accordion>
-                    {NavigationLinks.map((item, index) => (
-                        <Panel header={item.link} key={index}>
-                            {item.sublinks ? (
+                    {NavigationLinks.map((item, index) =>
+                        item.sublinks ? (
+                            <Panel header={item.link} key={index} className="NavPanel">
                                 <ul>
                                     {item.sublinks.map((subItem, subIndex) => (
-                                        <li key={subIndex}>
-                                            <Link to={subItem.path} onClick={toggleDrawer}>
+                                        <li key={subIndex} style={{ padding: "5px 0px" }}>
+                                            <Link to={subItem.path} onClick={handleLinkClick} style={{ color: "black", }}>
                                                 {subItem.link}
                                             </Link>
                                         </li>
                                     ))}
                                 </ul>
-                            ) : (
-                                <Link to={item.path} onClick={toggleDrawer}>
+                            </Panel>
+                        ) : (
+                            <div key={index} className="NavPanel no-collapse" style={{ padding: "10px 40px" }}>
+                                <Link to={item.path} onClick={handleLinkClick} style={{ color: "black" }}>
                                     {item.link}
                                 </Link>
-                            )}
-                        </Panel>
-                    ))}
+                            </div>
+                        )
+                    )}
                 </Collapse>
             </Drawer>
         </>
