@@ -3,14 +3,14 @@ import { Row, Col } from "antd";
 import "./TimeLineAnimatedComponent.css"
 import { IoIosArrowRoundDown } from "react-icons/io";
 import HighbroTimeLinePc from "./HighbroTimeLinePc.png"
-import higbroTimeLine from "./higbro-03.svg"
-import image1 from "./1.png"
-import image2 from "./2.png"
-import image3 from "./3.png"
-import image4 from "./4.png"
-import image5 from "./5.png"
-import image6 from "./6.png"
-import image7 from "./7.png"
+import higbroTimeLine from "./TimelineMainImage.png"
+import image1 from "./01.png"
+import image2 from "./02.png"
+import image3 from "./03.png"
+import image4 from "./04.png"
+import image5 from "./05.png"
+import image6 from "./06.png"
+import image7 from "./07.png"
 const TimeLineAnimatedComponent = () => {
 
     const TimeLineContentData = [
@@ -88,15 +88,15 @@ const TimeLineAnimatedComponent = () => {
                         </div>
                     </div> */}
                 </div>
-                {/* <img src={higbroTimeLine} alt="" /> */}
+                {/* <img src={higbroTimeLine} alt="" style={{width:"100%"}}/> */}
                 <div className="TimelineImages">
                     <img src={image1} alt="" data-aos="fade-up" data-aos-duration="1000" />
-                    <img src={image2} alt="" data-aos="fade-up"  data-aos-duration="1000"/>
-                    <img src={image3} alt="" data-aos="fade-up"  data-aos-duration="1000"/>
-                    <img src={image4} alt="" data-aos="fade-up"  data-aos-duration="1000"/>
+                    <img src={image2} alt="" data-aos="fade-up" data-aos-duration="1000" />
+                    <img src={image3} alt="" data-aos="fade-up" data-aos-duration="1000" />
+                    <img src={image4} alt="" data-aos="fade-up" data-aos-duration="1000" />
                     <img src={image5} alt="" data-aos="fade-up" data-aos-duration="1000" />
-                    <img src={image6} alt="" data-aos="fade-up"  data-aos-duration="1000"/>
-                    <img src={image7} alt="" data-aos="fade-up"  data-aos-duration="1000"/>
+                    <img src={image6} alt="" data-aos="fade-up" data-aos-duration="1000" />
+                    <img src={image7} alt="" data-aos="fade-up" data-aos-duration="1000" />
                 </div>
 
 

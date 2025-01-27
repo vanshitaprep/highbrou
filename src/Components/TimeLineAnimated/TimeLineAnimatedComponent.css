@@ -1,3 +1,7 @@
+#TimeLineAnimatedContainer {
+    overflow: hidden;
+}
+
 .AnimatedHoverAnimationTimeline {
     border-bottom: 1px solid black;
     padding: 30px 0px;
@@ -174,18 +178,21 @@
     /* margin-top: -7px; */
 }
 
-.TimelineImages img:last-child{
+/* .TimelineImages img:last-child{
     margin-left: -1px;
-}
+} */
 .TimelineImages {
     display: flex;
     flex-direction: column;
 }
-/* 
-.TimelineImages img:nth-child(4) {
-    margin-top: -1px !important;
+
+
+.TimelineImages img:nth-child(2) {
+    margin-left: 1px;
 }
 
-.TimelineImages img:nth-child(5) {
-    margin-top: -2px !important;
-} */
+@media (min-width:1500px) and (max-width:2000px) {
+    .TimelineImages {
+        padding: 0px 200px;
+    }
+}

@@ -9,6 +9,7 @@ import AllProjects from "./Components/AllProjects/Allprojects";
 import Footer from "./Components/Footer/Footer";
 import Career from "./Components/Careers/Carrer";
 import BackToTop from "./Components/BackToTop/BackToTop";
+import Contact from "./Components/Contact/Contact";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/allprojects" element={<AllProjects />} />
         <Route path="/career" element={<Career />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
       <BackToTop/>

@@ -55,7 +55,7 @@ const NavigationLinks = [
     },
     {
         link: "Contact",
-        path: ""
+        path: "/contact"
     }
 ]
 export default NavigationLinks
