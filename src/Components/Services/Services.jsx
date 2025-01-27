@@ -1,9 +1,10 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import CommonTopBannerDynamic from "../CommonTopBanner/CommonTopBannerDynamic";
 import { Row, Col } from "antd";
 import WhatWeDoCardsData from "../WhatWeDoHome/WhatWeDoData";
 import "./Services.css";
 import SectorsWeServe from "../SectorsWeServe/SectorsWeServe";
+import Expertise from "../Expertise/Expertise";
 
 const Services = () => {
     const [activeImage, setActiveImage] = useState(WhatWeDoCardsData[0].img); // Default to the first image
@@ -71,7 +72,8 @@ const Services = () => {
                     </Row>
                 </div>
             </section>
-            <SectorsWeServe/>
+            <SectorsWeServe />
+            <Expertise />
         </>
     );
 };

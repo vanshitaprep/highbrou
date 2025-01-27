@@ -6,6 +6,9 @@ import FooterBackOverlayImage from "./FooterBackOverlayImage.png"
 import NavigationLinks from "../HighbrouNavigation/NavigationLinks";
 import { IoLocationSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaInstagramSquare } from "react-icons/fa";
+
 const Footer = () => {
     return (
         <>
@@ -15,12 +18,15 @@ const Footer = () => {
                     <div className="sectionPadding">
                         <div className="FooterbackImageOverlay">
                             <img src={FooterBackOverlayImage} alt="" />
+
                         </div>
                         <Row>
                             <Col lg={6}>
                                 <div className="FooterLogoContainer">
                                     <div className="LogoPlacingContainer">
                                         <Link to="/"> <img src={highbrou_logo} alt="" /></Link>
+                                        <p>info@highbrou.com</p>
+                                        <p>Call: <Link to="tel:+91-9579307313" style={{ color: "white" }}>+91-9579307313.</Link></p>
                                     </div>
                                 </div>
                             </Col>
@@ -59,7 +65,10 @@ const Footer = () => {
                         </Row>
                         <div className="CopywriteText">
                             <p>@2025 <Link to="https://www.outleadsolutions.com/" target="_blank"><b>OutLead Solutions</b></Link>. All rights reserved.</p>
-                            <p>Call: <Link to="tel:+91-9579307313">+91-9579307313.</Link></p>
+                            <div style={{display:"flex",gap:"10px"}}>
+                                <FaLinkedin />
+                                <FaInstagramSquare />
+                            </div>
                         </div>
                     </div>
 
