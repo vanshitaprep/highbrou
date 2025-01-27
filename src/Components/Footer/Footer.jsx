@@ -20,7 +20,7 @@ const Footer = () => {
                             <Col lg={6}>
                                 <div className="FooterLogoContainer">
                                     <div className="LogoPlacingContainer">
-                                        <img src={highbrou_logo} alt="" />
+                                        <Link to="/"> <img src={highbrou_logo} alt="" /></Link>
                                     </div>
                                 </div>
                             </Col>
@@ -28,7 +28,7 @@ const Footer = () => {
                                 <div className="NavigationLinksContainer">
                                     <Row>
                                         {NavigationLinks.map((item, index) => (
-                                            <Col lg={12} style={{width:"100%"}}>
+                                            <Col lg={12} style={{ width: "100%" }}>
                                                 <p key={index}><Link to={item.path}>{item.link}</Link></p>
                                             </Col>
                                         ))}
