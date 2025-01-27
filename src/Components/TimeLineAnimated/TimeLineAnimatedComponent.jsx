@@ -3,6 +3,14 @@ import { Row, Col } from "antd";
 import "./TimeLineAnimatedComponent.css"
 import { IoIosArrowRoundDown } from "react-icons/io";
 import HighbroTimeLinePc from "./HighbroTimeLinePc.png"
+import higbroTimeLine from "./higbro-03.svg"
+import image1 from "./1.png"
+import image2 from "./2.png"
+import image3 from "./3.png"
+import image4 from "./4.png"
+import image5 from "./5.png"
+import image6 from "./6.png"
+import image7 from "./7.png"
 const TimeLineAnimatedComponent = () => {
 
     const TimeLineContentData = [
@@ -35,7 +43,7 @@ const TimeLineAnimatedComponent = () => {
             description: "Established as a trusted partner for architects, builders, and EPC contractors, delivering world-class structural engineering solutions globally."
         }
     ];
-    
+
 
     return (
         <>
@@ -79,7 +87,20 @@ const TimeLineAnimatedComponent = () => {
                             </div>
                         </div>
                     </div> */}
-                    <Row>
+                </div>
+                {/* <img src={higbroTimeLine} alt="" /> */}
+                <div className="TimelineImages">
+                    <img src={image1} alt="" data-aos="fade-up" />
+                    <img src={image2} alt="" data-aos="fade-up" />
+                    <img src={image3} alt="" data-aos="fade-up" />
+                    <img src={image4} alt="" data-aos="fade-up" />
+                    <img src={image5} alt="" data-aos="fade-up" />
+                    <img src={image6} alt="" data-aos="fade-up" />
+                    <img src={image7} alt="" data-aos="fade-up" />
+                </div>
+
+
+                {/* <Row>
                         {TimeLineContentData.map((item, index) => (
                             <Col lg={24} key={index} style={{ width: "100%" }}>
                                 <div className="AnimatedHoverAnimationTimeline">
@@ -92,8 +113,8 @@ const TimeLineAnimatedComponent = () => {
                                 </div>
                             </Col>
                         ))}
-                    </Row>
-                </div>
+                    </Row> */}
+
             </section>
         </>
     )

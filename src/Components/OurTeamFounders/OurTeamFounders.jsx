@@ -95,6 +95,7 @@ const OurTeamFounders = () => {
                     open={isModalOpen}
                     onCancel={handleCloseModal}
                     footer={null}
+                    width={700}
                 >
                     {selectedFounder && (
                         <>
