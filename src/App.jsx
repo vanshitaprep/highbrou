@@ -8,6 +8,7 @@ import Services from "./Components/Services/Services";
 import AllProjects from "./Components/AllProjects/Allprojects";
 import Footer from "./Components/Footer/Footer";
 import Career from "./Components/Careers/Carrer";
+import BackToTop from "./Components/BackToTop/BackToTop";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/career" element={<Career />} />
       </Routes>
       <Footer />
+      <BackToTop/>
     </Router>
   );
 }

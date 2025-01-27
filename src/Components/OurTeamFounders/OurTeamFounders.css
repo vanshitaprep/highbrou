@@ -126,20 +126,23 @@
     color: white;
     display: inline-block;
 }
-.ModalFounderImage{
+
+.ModalFounderImage {
     width: 100%;
     border-radius: 20px;
 }
-.ModalDetails ul{
+
+.ModalDetails ul {
     padding: 20px;
 }
-.ModalDetails ul li{
+
+.ModalDetails ul li {
     font-size: 18px;
 }
 
 
 
-@media (min-width:1500px) and (max-width:4000px){
+@media (min-width:1500px) and (max-width:4000px) {
     .FounderAnimatedCard {
         position: relative;
         overflow: hidden;
@@ -148,17 +151,41 @@
         width: 70%;
         border-radius: 20px;
     }
-    .FoundersAnimatedCards .ant-row .ant-col{
+
+    .FoundersAnimatedCards .ant-row .ant-col {
         display: flex;
         align-items: center;
         justify-content: center;
-    } 
+    }
 }
 
-@media (max-width:900px){
-    .FoundersAnimatedCards .ant-row .ant-col{
+@media (max-width:900px) {
+    .OurTeamFoundersContentHeader span {
+        display: flex;
+        align-items: start;
+        margin: 30px 0px;
+        font-weight: 600;
+        font-size: 17px;
+        text-transform: uppercase;
+        padding: 0px 0px;
+        color: black;
+
+    }
+
+    .OurTeamFoundersContentHeader span::before {
+        content: "";
+        height: 1px;
+        width: 20px;
+        background-color: rgb(0, 0, 0);
+        color: rgb(0, 0, 0);
+        display: inline-block;
+        margin-top: 12px;
+    }
+
+    .FoundersAnimatedCards .ant-row .ant-col {
         padding: 20px 0px;
     }
+
     .FounderAnimatedCard {
         position: relative;
         overflow: hidden;
@@ -167,15 +194,15 @@
         border-radius: 20px;
     }
 
-.OurTeamFoundersContentHeader h2 {
-    color: rgb(13, 42, 59);
-    letter-spacing: -1.4px;
-    margin-top: 0;
-    margin-bottom: 26px;
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 107%;
-    margin-top: 10px;
-}
-    
+    .OurTeamFoundersContentHeader h2 {
+        color: rgb(13, 42, 59);
+        letter-spacing: -1.4px;
+        margin-top: 0;
+        margin-bottom: 26px;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 107%;
+        margin-top: 10px;
+    }
+
 }
