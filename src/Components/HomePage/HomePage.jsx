@@ -4,7 +4,9 @@ import { Row, Col } from "antd";
 import { FaArrowRightLong } from "react-icons/fa6";
 import CarousalImage1 from "./CarousalImage1.jpeg"
 import CarousalImage2 from "./CarousalImage2.jpeg"
+import Homeback from "./Homeback.jpg"
 const images = [
+    Homeback,
     "https://plus.unsplash.com/premium_photo-1661335257817-4552acab9656?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1705233844656-d05196a4fa30?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     CarousalImage1,
@@ -16,7 +18,7 @@ const HomePage = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 3000); // Change image every 2 seconds
+        }, 4000); // Change image every 2 seconds
 
         return () => clearInterval(interval);
     }, [images.length]);
@@ -42,7 +44,7 @@ const HomePage = () => {
                         </div>
                         <div className="HoverTextPoints">
                             <Row style={{ width: "100%" }}>
-                                <Col lg={6} md={12} style={{width:"100%"}}>
+                                <Col lg={6} md={12} style={{ width: "100%" }}>
                                     <div className="HoverItem">
                                         <div>
                                             <h4>CUTTING EDGE DESIGN</h4>
@@ -54,7 +56,7 @@ const HomePage = () => {
                                         <hr />
                                     </div>
                                 </Col>
-                                <Col lg={6} md={12} style={{width:"100%"}}>
+                                <Col lg={6} md={12} style={{ width: "100%" }}>
 
                                     <div className="HoverItem">
                                         <h4>PECISION ENGINEERING</h4>
@@ -65,7 +67,7 @@ const HomePage = () => {
                                         <hr />
                                     </div>
                                 </Col>
-                                <Col lg={6} md={12} style={{width:"100%"}}>
+                                <Col lg={6} md={12} style={{ width: "100%" }}>
                                     <div className="HoverItem">
                                         <h4>SUSTAINABLE SOLUTIONS</h4>
                                         <FaArrowRightLong />
@@ -75,7 +77,7 @@ const HomePage = () => {
                                         <hr />
                                     </div>
                                 </Col>
-                                <Col lg={6} md={12} style={{width:"100%"}}>
+                                <Col lg={6} md={12} style={{ width: "100%" }}>
                                     <div className="HoverItem">
                                         <h4>RAPID DELIVERY </h4>
                                         <FaArrowRightLong />
