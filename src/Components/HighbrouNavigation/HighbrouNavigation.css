@@ -72,14 +72,16 @@
     position: relative;
     transition: .5s;
 }
-.NavigationLinksContainer ul li a{
+
+.NavigationLinksContainer ul li a {
     color: rgb(13, 42, 59);
 }
 
 
-.NavigationLinksContainer ul li a:hover{
+.NavigationLinksContainer ul li a:hover {
     color: #2989BC;
 }
+
 .NavigationLinksContainer ul li::before {
     opacity: 0;
     transition: .5s;
@@ -161,7 +163,8 @@
     opacity: 1;
     transition: .5s;
 }
-.dropdown ul{
+
+.dropdown ul {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -180,7 +183,7 @@
 } */
 
 
-@media (min-width:1500px) and (max-width:4000px){
+@media (min-width:1500px) and (max-width:4000px) {
     .NavigationBarContainer {
         display: flex;
         justify-content: center;
@@ -197,14 +200,14 @@
 
 .mobileOnly {
     display: none;
-  }
-  
-  .desktopOnly {
+}
+
+.desktopOnly {
     display: flex;
-  }
-  
-  /* Mobile View */
-  @media (max-width: 768px) {
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
     .NavigationBarContainer {
         display: flex;
         justify-content: center;
@@ -218,16 +221,16 @@
         left: 0px;
     }
 
-.NavigationBarContainer.scrolled .mainDevideContainer {
-    padding: 0px 10px;
-    transition: .5s;
-}
-    
+    .NavigationBarContainer.scrolled .mainDevideContainer {
+        padding: 0px 10px;
+        transition: .5s;
+    }
+
     .desktopOnly {
-      display: none;
+        display: none;
     }
-  
+
     .mobileOnly {
-      display: block;
+        display: block;
     }
-  }
+}

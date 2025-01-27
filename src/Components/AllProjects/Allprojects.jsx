@@ -44,10 +44,10 @@ const AllProjects = () => {
                                                     <div className="OverlayContainerShadow">
 
                                                     </div>
-                                                    <img src="https://images.unsplash.com/photo-1536008481235-3e8a05b1666b?q=80&w=2539&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                                                    <img src={item.image} alt="" />
                                                     <div className="HoverContainerContainer">
                                                         <h2>{item.heading}</h2>
-                                                        <p>{item.description}</p>
+                                                        {/* <p>{item.description}</p> */}
                                                     </div>
                                                 </div>
                                             </div>

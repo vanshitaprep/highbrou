@@ -2,8 +2,10 @@ import React from "react";
 import "./WhatWeDoHome.css"
 import { Row, Col } from "antd";
 import WhatWeDoCardsData from "./WhatWeDoData";
+import { Link } from "react-router-dom";
+import { MdOutlineArrowRight } from "react-icons/md";
 const WhatWeDoHome = () => {
-   
+
     return (
         <>
             <section className="sectionPadding" id="WhatWeDoHome">
@@ -17,6 +19,7 @@ const WhatWeDoHome = () => {
                             <Row>
                                 {WhatWeDoCardsData.map((item, index) => (
                                     <Col key={index} lg={8} md={12}>
+                                        <Link to="/services">
                                         <div className="BorderHoverCard">
                                             <div className="HoverableCardImage">
                                                 <img src={item.img} alt="" />
@@ -24,13 +27,17 @@ const WhatWeDoHome = () => {
                                             <div className="HoverableCardContent">
                                                 <span>{item.tagline}</span>
                                                 <h2>{item.title}</h2>
+
                                             </div>
                                             <hr />
                                         </div>
+                                        </Link>
                                     </Col>
                                 ))}
 
                             </Row>
+                            <br /><br />
+                           <Link to="/allprojects"> <button className="AnimatedBtnContainer">All Projects<MdOutlineArrowRight /></button></Link>
                         </div>
                     </div>
                 </div>

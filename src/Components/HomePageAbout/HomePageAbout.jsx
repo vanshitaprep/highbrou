@@ -3,6 +3,7 @@ import { Row, Col } from "antd";
 import "./AboutHomeContent.css"
 import { MdOutlineArrowRight } from "react-icons/md";
 import BackOverlayImage from "./BackOverlayImage.png"
+import { Link } from "react-router-dom";
 const HomePageAbout = () => {
     const [offsetY, setOffsetY] = useState(0);
 
@@ -31,7 +32,7 @@ const HomePageAbout = () => {
                                     <p>At Highbrou Engineering, we specialize in turning visionary concepts into enduring and impactful structures. With more than a decade of expertise in structural engineering, we excel in crafting precision-driven solutions tailored to diverse project needs.
                                     </p>
                                     <p>Our portfolio spans high-rise buildings, intricate industrial facilities, hospitality venues, and government infrastructure. Each project reflects our unwavering commitment to quality, innovation, and resilience.</p>
-                                    <button className="AnimatedBtnContainer">Learn More<MdOutlineArrowRight /></button>
+                                   <Link to="/about-us"> <button className="AnimatedBtnContainer">Learn More<MdOutlineArrowRight /></button></Link>
                                 </div>
                             </div>
                         </Col>

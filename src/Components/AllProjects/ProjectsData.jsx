@@ -1,10 +1,28 @@
 const ProjectsData = [
     {
         id: 1,
-        image: "/images/projects/project1.jpg", // Replace with actual image paths
-        heading: "Modern Skyscraper Design",
+        image: "/Images/ProjectsImages/DhananjayHeights.png", // Replace with actual image paths
+        heading: "Dhananjay Heights – Nalasopara (W)",
         tagline: "Reaching New Heights",
-        description: "A stunning architectural marvel designed with cutting-edge technology to redefine city skylines."
+        description: <>
+            <ul>
+                <li><b>Floor count, height & construction area:</b> Ground + 22 floors, 68m high, ~15000 SqM construction area</li>
+                <li><b>Location:</b> Nalasopara West, Palghar (MS), India</li>
+                <li><b>Architect: </b>Shree consultants, Mumbai</li>
+                <li><b>Client:</b> Realtech Infra</li>
+                <li><b>Status:</b> On going</li>
+                <li><b>Challenge:</b> Asymmetrical Architectural layouts made it difficult to create a balanced structural frame, causing torsional instability under seismic loads.</li>
+                <li><b>Our Innovative Solution:</b>
+
+                    <ul>
+                        <li>Designed coupled shear walls to balance the building’s weight and stiffness.
+                        </li>
+                        <li>Ensured even distribution of forces to keep the structure stable during earthquakes.</li>
+                    </ul>
+                </li>
+                <li><b>Key Benefit:</b> Provided a solution that ensured the building was safe, stable, and compliant, even with its unique layout challenges</li>
+            </ul>
+        </>
     },
     {
         id: 2,

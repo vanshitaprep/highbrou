@@ -51,7 +51,7 @@ const NavigationLinks = [
     },
     {
         link: "Career",
-        path: ""
+        path: "/career"
     },
     {
         link: "Contact",

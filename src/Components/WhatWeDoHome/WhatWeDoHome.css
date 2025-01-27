@@ -58,6 +58,10 @@ height: 400px;
 .HoverableCardContent h2 {
     font-weight: 500;
     margin-top: 5px;
+    color: rgb(13, 42, 59);
+}
+.HoverableCardContent span{
+    color: rgb(13, 42, 59);
 }
 
 .BorderHoverCard {

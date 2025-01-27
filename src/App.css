@@ -37,19 +37,22 @@ p {
   /* font-family: "Barlow", serif; */
   font-family: "Poppins", serif;
 }
-.ant-modal-mask{
+
+.ant-modal-mask {
   backdrop-filter: blur(5px);
 }
-@media (min-width:1500px) and (max-width:4000px){
+
+
+
+@media (min-width:1500px) and (max-width:4000px) {
   .sectionPadding {
     padding: 80px 200px;
   }
 }
 
-@media (max-width:900px){
+@media (max-width:900px) {
   .sectionPadding {
     padding: 80px 10px;
   }
-  
-}
 
+}
