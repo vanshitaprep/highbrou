@@ -90,13 +90,13 @@ const TimeLineAnimatedComponent = () => {
                 </div>
                 {/* <img src={higbroTimeLine} alt="" /> */}
                 <div className="TimelineImages">
-                    <img src={image1} alt="" data-aos="fade-up" />
-                    <img src={image2} alt="" data-aos="fade-up" />
-                    <img src={image3} alt="" data-aos="fade-up" />
-                    <img src={image4} alt="" data-aos="fade-up" />
-                    <img src={image5} alt="" data-aos="fade-up" />
-                    <img src={image6} alt="" data-aos="fade-up" />
-                    <img src={image7} alt="" data-aos="fade-up" />
+                    <img src={image1} alt="" data-aos="fade-up" data-aos-duration="1000" />
+                    <img src={image2} alt="" data-aos="fade-up"  data-aos-duration="1000"/>
+                    <img src={image3} alt="" data-aos="fade-up"  data-aos-duration="1000"/>
+                    <img src={image4} alt="" data-aos="fade-up"  data-aos-duration="1000"/>
+                    <img src={image5} alt="" data-aos="fade-up" data-aos-duration="1000" />
+                    <img src={image6} alt="" data-aos="fade-up"  data-aos-duration="1000"/>
+                    <img src={image7} alt="" data-aos="fade-up"  data-aos-duration="1000"/>
                 </div>
 
 

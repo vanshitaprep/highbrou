@@ -1,10 +1,10 @@
 .sectorsCardsContainer h2 {
     color: black;
-    padding-top: 100px;
+    padding-top: 30px;
 }
 
 .sectorsCardsContainer {
-    min-height: 400px;
+    min-height: 330px;
     border-right: 0.5px solid black;
     /* padding:20px 20px; */
     transition: .5s;
