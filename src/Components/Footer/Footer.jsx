@@ -28,7 +28,7 @@ const Footer = () => {
                                 <div className="NavigationLinksContainer">
                                     <Row>
                                         {NavigationLinks.map((item, index) => (
-                                            <Col lg={12}>
+                                            <Col lg={12} style={{width:"100%"}}>
                                                 <p key={index}><Link to={item.path}>{item.link}</Link></p>
                                             </Col>
                                         ))}
