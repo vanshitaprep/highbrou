@@ -5,23 +5,48 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import CarousalImage1 from "./CarousalImage1.jpeg"
 import CarousalImage2 from "./CarousalImage2.jpeg"
 import Homeback from "./Homeback.jpg"
-const images = [
+const imageUrls = [
     Homeback,
     "https://plus.unsplash.com/premium_photo-1661335257817-4552acab9656?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1705233844656-d05196a4fa30?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     CarousalImage1,
     CarousalImage2,
 ];
+
 const HomePage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [images, setImages] = useState([]); // State to hold preloaded images
+    const [loading, setLoading] = useState(true); // Loading state
 
+    // Function to preload images
     useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 4000); // Change image every 2 seconds
+        const preloadImages = async () => {
+            const loadedImages = await Promise.all(
+                imageUrls.map((src) => {
+                    return new Promise((resolve) => {
+                        const img = new Image();
+                        img.src = src;
+                        img.onload = () => resolve(src);
+                    });
+                })
+            );
 
-        return () => clearInterval(interval);
-    }, [images.length]);
+            setImages(loadedImages); // Update state with preloaded images
+            setLoading(false); // Mark loading as complete
+        };
+
+        preloadImages();
+    }, []);
+
+    // Change image every 4 seconds
+    useEffect(() => {
+        if (!loading) {
+            const interval = setInterval(() => {
+                setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+            }, 4000);
+            return () => clearInterval(interval);
+        }
+    }, [loading, images.length]);
     return (
         <>
             <section className="AnimatedHomePageContainer">
