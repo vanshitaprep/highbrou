@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admission Form</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/antd@4.17.0/dist/antd.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <style>
+    .form-main-container h1 {
+      font-size: 25px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .child-container-flex {
+      display: flex;
+      /* align-items: center; */
+    }
+
+    .form-elements-container {
+      margin-top: 40px;
+    }
+
+    .form-elements-container .ant-form-item {
+      width: 100%;
+    }
+
+    .child-container-flex .ant-form-item {
+      margin: 10px 10px;
+    }
+
+    .form-main-container {
+      width: 100%;
+    }
+
+    .child-container-flex1 {
+      display: flex;
+      margin: 0px;
+    }
+
+    @media (max-width: 1180px) {
+      .child-container-flex {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .child-container-flex1 {
+        display: flex;
+        margin: 0px;
+        flex-direction: column;
+      }
+
+      .form-main-container {
+        width: 100%;
+      }
+    }
+
+    .form-elements-container .ant-form-item-label {
+      width: 235px;
+      display: flex;
+    }
+
+    /* .page2form .ant-form-item-label {
+    width: 200px;
+    display: flex;
+} */
+
+    .form-btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .form-btn-container .ant-btn {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      background-color: #0db2e5;
+      border: #0db2e5;
+      border-radius: 8px;
+      box-shadow: none;
+    }
+
+    .form-btn-container>.ant-btn:first-child {
+      background-color: transparent;
+      border: 1px solid #0db2e5;
+      color: #0ab4e9;
+    }
+
+    .form-btn-container>.ant-btn:first-child:hover {
+      background-color: #0db2e5;
+      border: 1px solid #0db2e5;
+      color: #ffffff;
+    }
+
+    .page2form {
+      height: 100vh;
+      overflow: auto;
+    }
+
+    @media (min-width: 800px) and (max-width: 1300px) {
+      .page2form {
+        height: 80vh;
+        overflow: auto;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .page2form {
+        height: 100%;
+        overflow: auto;
+      }
+
+      .form-elements-container .ant-form-item {
+        margin: 0px 0px;
+      }
+
+      .form-elements-container .ant-form-item-label {
+        width: 235px;
+        display: flex;
+        padding: 0px;
+      }
+
+      .form-elements-container .ant-form .ant-form-item .ant-form-item-label {
+        padding: 0px;
+      }
+    }
+
+    .custom-progress-bar .ant-progress-inner {
+      background-color: #f0f0f0;
+      /* Background color of progress bar */
+    }
+
+    .form-main-container .progress-steps {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+
+    .form-main-container .progress-step {
+      color: #000;
+      /* Default color for step text */
+    }
+
+    .form-main-container .ant-progress-text {
+      display: none;
+    }
+
+    .form-main-container .ant-progress-inner {
+      height: 3px;
+      text-align: center;
+      margin: auto;
+      display: flex;
+      background-color: #a2a2a250;
+      /* border: 1px solid #a2a2a250; */
+    }
+
+    .form-main-container .ant-progress-success-bg,
+    .ant-progress-bg {
+      height: 4px;
+      background-color: #0aaadb;
+    }
+
+    .form-main-container .ant-progress-status-success .ant-progress-bg {
+      background-color: #0aaadb;
+    }
+
+    /* .form-main-container .ant-progress-line{
+    position: relative;
+    width: 59%;
+    display: flex;
+    margin: auto;
+ } */
+    .form-main-container .ant-progress-outer {
+      padding: 0px;
+    }
+
+    .form-main-container .progress-bar-container {
+      width: 60%;
+      justify-content: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .form-main-container .progress-bar-container div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+    }
+
+    .form-main-container .progress-bar-container div span {
+      border: 2px solid #a2a2a250;
+      padding: 2px 9px;
+      border-radius: 50%;
+      /* color: rgb(0, 0, 0); */
+      color: #a2a2a2;
+      background-color: white;
+    }
+
+    .form-main-container .progress-bar-container div span.filled {
+      color: white;
+      border: none;
+    }
+
+    .filled {
+      border: 1px solid #0aaadb;
+      background-image: linear-gradient(to right, #0aaadb, #65dbff);
+      /* For older browsers */
+      background-image: -webkit-linear-gradient(left, #0aaadb, #65dbff);
+      background-image: -moz-linear-gradient(left, #0aaadb, #65dbff);
+      background-image: -o-linear-gradient(left, #0aaadb, #65dbff);
+      background-image: -ms-linear-gradient(left, #0aaadb, #65dbff);
+      transition: 0.3s;
+    }
+
+    .InputForSas {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+      border-left: none;
+      border-top: none;
+      border-right: none;
+    }
+
+    .form-main-container-sas {
+      width: 100%;
+    }
+
+    .form-main-container-sas .in-one-line-arrange {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .form-main-container-sas .ant-input:focus,
+    .form-main-container-sas .ant-input:active {
+      box-shadow: none;
+    }
+
+    .form-main-container-sas .in-one-line-arrange div {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    @media (max-width: 1300px) {
+      #form-main-container-sas {
+        width: 100%;
+      }
+    }
+
+    .form-main-container-sas .ant-input {
+      border-bottom: 2px solid rgba(0, 0, 0, 0.301);
+      border-left: none;
+      border-top: none;
+      border-right: none;
+    }
+
+    .form-main-container-sas h1 {
+      font-size: 25px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-main-container-sas .progress-steps {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+
+    .form-main-container-sas .progress-step {
+      color: #000;
+      /* Default color for step text */
+    }
+
+    .form-main-container-sas .ant-progress-text {
+      display: none;
+    }
+
+    .form-main-container-sas .ant-progress-inner {
+      height: 3px;
+      text-align: center;
+      margin: auto;
+      display: flex;
+      background-color: #a2a2a250;
+      /* border: 1px solid #a2a2a250; */
+    }
+
+    .form-main-container-sas .ant-progress-success-bg,
+    .ant-progress-bg {
+      height: 4px;
+      background-color: #0aaadb;
+    }
+
+    .form-main-container-sas .ant-progress-status-success .ant-progress-bg {
+      background-color: #0aaadb;
+    }
+
+    /* .form-main-container-sas .ant-progress-line{
+    position: relative;
+    width: 59%;
+    display: flex;
+    margin: auto;
+ } */
+    .form-main-container-sas .ant-progress-outer {
+      padding: 0px;
+    }
+
+    .form-main-container-sas .progress-bar-container {
+      width: 60%;
+      justify-content: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .form-main-container-sas .progress-bar-container div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+    }
+
+    .form-main-container-sas .progress-bar-container div span {
+      border: 2px solid #a2a2a250;
+      padding: 2px 9px;
+      border-radius: 50%;
+      /* color: rgb(0, 0, 0); */
+      color: #a2a2a2;
+      background-color: white;
+    }
+
+    .form-main-container-sas .progress-bar-container div span.filled {
+      color: white;
+      border: none;
+    }
+
+    .row-field-set {
+      display: flex;
+      align-items: center;
+      /* justify-content: space-between; */
+      margin: 30px 0px;
+    }
+
+    .row-field-set .ant-form-item {
+      width: 100%;
+      margin: 0px 5px;
+    }
+
+    .row-field-set .ant-picker {
+      width: 100%;
+    }
+
+    @media (max-width: 700px) {
+      .row-field-set {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        margin: 30px 0px;
+      }
+    }
+
+    @media (min-width: 550px) and (max-width: 660px) {
+      .row-field-set .ant-form-item {
+        margin: 20px 0px;
+      }
+    }
+
+    label {
+      margin-left: 10px;
+      margin-right: 5px;
+    }
+
+    label span {
+      color: red;
+    }
+
+    #submit_btn {
+      border: none;
+      background-color: transparent;
+      padding: 8px 30px;
+      background-color: #f3ac3e;
+      transition: 0.5s;
+    }
+
+    #submit_btn:hover {
+      background-color: #f3ac3e;
+      transition: 0.5s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-main-container-sas" id="form-main-container-sas" style="padding: 20px">
+    <div>
+      <h1>Admissions Open</h1>
+    </div>
+    <br />
+    <form name="your_form" id="admission_form">
+      <div class="row-field-set">
+        <label for="academicYear">Academic&nbsp;Year:&nbsp;</label>
+        <select class="form-select" id="academicYear" required>
+          <option value="2024-25">2024-25</option>
+          <option value="2024-25">2025-26</option>
+
+        </select>
+        <label for="admissionClass">Admission&nbsp;Class:&nbsp;</label>
+        <select class="form-select" id="admissionClass" required>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+          <option value="IV">IV</option>
+          <option value="V">V</option>
+        </select>
+        <label for="smsNumber">SMS&nbsp;Number:<span>*</span></label>
+        <input class="form-control" type="text" id="smsNumber" pattern="[6-9][0-9]{9}" required
+          title="Please enter a valid Indian mobile number" />
+
+        <label for="emailId">Email&nbsp;ID:&nbsp;<span>*</span></label>
+        <input class="form-control" type="email" id="emailId" required />
+      </div>
+      <div class="row-field-set">
+        <label for="studentFirstName">Student&nbsp;First&nbsp;Name:&nbsp;<span>*</span></label>
+        <input class="form-control" type="text" id="studentFirstName" required />
+        <label for="studentMiddleName">Student&nbsp;Middle&nbsp;Name:&nbsp;</label>
+        <input class="form-control" type="text" id="studentMiddleName" />
+        <label for="studentLastName">Student&nbsp;Last&nbsp;Name:&nbsp;<span>*</span></label>
+        <input class="form-control" type="text" id="studentLastName" required />
+      </div>
+      <div class="row-field-set">
+        <label
+          for="studentFullNameAsPerSchoolRecord">Student&nbsp;Full&nbsp;Name&nbsp;as&nbsp;per&nbsp;School&nbsp;Record<span>*</span></label>
+        <input class="form-control" type="text" id="studentFullNameAsPerSchoolRecord" required />
+      </div>
+      <div class="row-field-set">
+        <label for="gender">Gender<span>*</span></label>
+        <!-- <select class="form-select" id="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select> -->
+        <select class="form-select" id="gender" required>
+          <option value="" disabled selected>Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <label for="dob">Date&nbsp;of&nbsp;Birth<span>*</span></label>
+        <input class="form-control" type="date" id="dob" required />
+        <label for="motherName">Mother'&nbsp;Name:<span>*</span></label>
+        <input class="form-control" type="text" id="motherName" required />
+      </div>
+      <div class="row-field-set">
+        <label for="previousSchoolName">Previous&nbsp;School&nbsp;Name:&nbsp;</label>
+        <input class="form-control" type="text" id="previousSchoolName" />
+        <label for="address">Address:&nbsp;<span>*</span></label>
+        <textarea class="form-control" id="address" required></textarea>
+      </div>
+      <div class="row-field-set">
+        <label
+          for="sourceOfEnquiry">How&nbsp;did&nbsp;you&nbsp;come&nbsp;to&nbsp;know&nbsp;about&nbsp;us?&nbsp;<span>*</span></label>
+        <select class="form-select" id="sourceOfEnquiry" required>
+          <option value="" disabled selected>Select</option>
+          <option value="Reference">Reference</option>
+          <option value="Sibling already studies in SAS or Little Marvels Preschools">Sibling already studies in SAS or
+            Little Marvels Preschools</option>
+          <option value="Newspaper Advertisement">Newspaper Advertisement</option>
+          <option value="Hoarding Advertisement">Hoarding Advertisement</option>
+          <option value="News Paper">News Paper</option>
+          <option value="Parent of school">Parent of School</option>
+          <option value="Saw an ad on Social Media">Saw an ad on Social Media</option>
+        </select>
+        <label for="referredBy">Referred&nbsp;By</label>
+        <input class="form-control" type="text" id="referredBy" />
+      </div>
+      <br />
+      <div class="row-field-set" style="display: flex;justify-content: end;">
+        <button type="submit" id="submit_btn">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("admission_form");
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+        const formValues = {
+          academicYear: document.getElementById("academicYear").value,
+          admissionClass: document.getElementById("admissionClass").value,
+          smsNumber: document.getElementById("smsNumber").value,
+          emailId: document.getElementById("emailId").value,
+          studentFirstName: document.getElementById("studentFirstName").value,
+          studentMiddleName:
+            document.getElementById("studentMiddleName").value,
+          studentLastName: document.getElementById("studentLastName").value,
+          studentFullNameAsPerSchoolRecord: document.getElementById(
+            "studentFullNameAsPerSchoolRecord"
+          ).value,
+          gender: document.getElementById("gender").value,
+          dob: document.getElementById("dob").value,
+          motherName: document.getElementById("motherName").value,
+          previousSchoolName:
+            document.getElementById("previousSchoolName").value,
+          address: document.getElementById("address").value,
+          sourceOfEnquiry: document.getElementById("sourceOfEnquiry").value,
+          referredBy: document.getElementById("referredBy").value,
+        };
+
+        try {
+          const requestBody = JSON.stringify(formValues);
+          console.log("requestBody", requestBody);
+          const response = await fetch(
+            "http://localhost:4040/api/users/enquiryForm",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: requestBody,
+            }
+          );
+          const data = await response.json();
+          if (data.success) {
+            alert(data.message);
+            form.reset();
+          } else {
+            alert(data.message);
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          alert("An error occurred while submitting the form.");
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

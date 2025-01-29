@@ -1,15 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import CommonTopBannerDynamic from "../CommonTopBanner/CommonTopBannerDynamic";
 import "./ProjectsPage.css"
-import { Row, Col } from "antd";
+import { Modal, Row, Col, Carousel, Image } from "antd";
 import ProjectsData from "./ProjectsData";
 import NavigationLinks from "../HighbrouNavigation/NavigationLinks";
 const AllProjects = () => {
     const projectCategory = NavigationLinks.find(link => link.link === "Projects +");
+
+    // State for Modal
+    const [isModalVisible, setIsModalVisible] = useState(false);
+    const [selectedProject, setSelectedProject] = useState(null);
+
     useEffect(() => {
-        // Scroll to the top of the page when the component is mounted
         window.scrollTo(0, 0);
     }, []);
+
+    // Open Modal with Selected Project
+    const showModal = (project) => {
+        setSelectedProject(project);
+        setIsModalVisible(true);
+    };
+
+    // Close Modal
+    const handleCancel = () => {
+        setIsModalVisible(false);
+        setSelectedProject(null);
+    };
 
     return (
         <>
@@ -39,12 +55,14 @@ const AllProjects = () => {
                                     </Col>
                                     <Col lg={14}>
                                         {ProjectsData.map((item, index) => (
-                                            <div className="ProjectsCardsContainer" key={index}>
+                                            <div className="ProjectsCardsContainer" key={index} onClick={() => showModal(item)} style={{ cursor: "pointer" }}>
                                                 <div className="heightContainer">
                                                     <div className="OverlayContainerShadow">
 
                                                     </div>
-                                                    <img src={item.image} alt="" />
+                                                    {Array.isArray(item.image) && item.image.length > 0 && (
+                                                        <img src={item.image[0]} alt={item.heading} />
+                                                    )}
                                                     <div className="HoverContainerContainer">
                                                         <h2>{item.heading}</h2>
                                                         {/* <p>{item.description}</p> */}
@@ -55,6 +73,32 @@ const AllProjects = () => {
                                     </Col>
                                 </Row>
                             </div>
+                            <Modal
+                                title={selectedProject?.heading} // Dynamic Title
+                                open={isModalVisible}
+                                onCancel={handleCancel}
+                                footer={null} // No footer buttons
+                                width={1000} // Adjust modal width
+                            >
+                                {selectedProject && (
+                                    <div>
+                                        <div style={{ display: "flex", flexWrap: "wrap", padding: "5px" }}>
+                                            {selectedProject.image.map((imgSrc, imgIndex) => (
+                                                <Image
+                                                    className="ModalInsideGalleryImage"
+                                                    key={imgIndex}
+                                                    src={imgSrc}
+                                                    alt={`${selectedProject.heading} - ${imgIndex + 1}`}
+                                                // style={{ width: "100%", borderRadius: "10px" }}
+                                                />
+                                            ))}
+                                        </div>
+                                        {/* <p><b>Tagline:</b> {selectedProject.tagline}</p> */}
+                                        <p><b>Description:</b></p>
+                                        {selectedProject.description} {/* Renders the JSX description */}
+                                    </div>
+                                )}
+                            </Modal>
                         </div>
                     </div>
                 </div>

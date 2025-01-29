@@ -25,7 +25,7 @@ const Footer = () => {
                                 <div className="FooterLogoContainer">
                                     <div className="LogoPlacingContainer">
                                         <Link to="/"> <img src={highbrou_logo} alt="" /></Link>
-                                        <p>info@highbrou.com</p>
+                                        <Link to="mailto:info@highbrou.com"><p>info@highbrou.com</p></Link>
                                         <p>Call: <Link to="tel:+91-9579307313" style={{ color: "white" }}>+91-9579307313.</Link></p>
                                     </div>
                                 </div>
