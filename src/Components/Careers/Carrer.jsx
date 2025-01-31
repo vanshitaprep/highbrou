@@ -32,7 +32,7 @@ const Career = () => {
                 <CommonTopBannerDynamic
                     heading="Our Career"
                     subheading="Our Career, Our Future"
-                    image="https://img.freepik.com/free-photo/construction-site-silhouettes_1127-2990.jpg?t=st=1737616296~exp=1737619896~hmac=540a3debb5585273f0e4171b9ba7ba2d8368d09280cd4a146b3ec8ce03f20446&w=1800"
+                    image="https://img.freepik.com/free-photo/walkway-with-glass-walls_1127-2246.jpg?t=st=1738234321~exp=1738237921~hmac=29f6078e4911675346a192b11c7087b6ab24774bdde4af1989f44f5c8241f85c&w=2000"
                 />
                 <div className="CareerPostContainer sectionPadding">
                     <Row>

@@ -83,15 +83,26 @@ const AllProjects = () => {
                                 {selectedProject && (
                                     <div>
                                         <div style={{ display: "flex", flexWrap: "wrap", padding: "5px" }}>
-                                            {selectedProject.image.map((imgSrc, imgIndex) => (
+                                            {Array.isArray(selectedProject?.image) ? (
+                                              <>
+                                                    {selectedProject.image.map((imgSrc, imgIndex) => (
+                                                        <Image
+                                                            className="ModalInsideGalleryImage"
+                                                            key={imgIndex}
+                                                            src={imgSrc}
+                                                        
+                                                            alt={`${selectedProject.heading} - ${imgIndex + 1}`}
+                                                        />
+                                                    ))}
+                                               </>
+                                            ) : (
                                                 <Image
                                                     className="ModalInsideGalleryImage"
-                                                    key={imgIndex}
-                                                    src={imgSrc}
-                                                    alt={`${selectedProject.heading} - ${imgIndex + 1}`}
-                                                // style={{ width: "100%", borderRadius: "10px" }}
+                                                    src={selectedProject?.image}
+                                                    alt={selectedProject?.heading}
                                                 />
-                                            ))}
+                                            )}
+
                                         </div>
                                         {/* <p><b>Tagline:</b> {selectedProject.tagline}</p> */}
                                         <p><b>Description:</b></p>

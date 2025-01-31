@@ -2,8 +2,10 @@
 const ProjectsData = [
     {
         id: 1,
+        category: "Building Structures",
         image: [
             "/Images/ProjectsImages/DhananjayHeights.png",
+            "/Images/ProjectsImages/jaymala1.jpg"
 
         ], // Replace with actual image paths
         heading: "Dhananjay Heights – Nalasopara (W)",
@@ -30,7 +32,8 @@ const ProjectsData = [
     },
     {
         id: 2,
-        image: "/images/projects/project2.jpg",
+        category: "Building Structures",
+        image: "/Images/projects/project2.jpg",
         heading: "ROOHI SOLITAIRE - VILLE PARLE",
         tagline: "Connecting Communities",
         description: <>
@@ -54,7 +57,8 @@ const ProjectsData = [
     },
     {
         id: 3,
-        image: "/images/projects/project3.jpg",
+        image: "/Images/projects/project3.jpg",
+        category: "Building Structures",
         heading: "THE SKY HEAVEN - ANDHERI (W)",
         tagline: "Living in Harmony with Nature",
         description: <>
@@ -91,7 +95,8 @@ const ProjectsData = [
     },
     {
         id: 4,
-        image: "/images/projects/project4.jpg",
+        category: "Building Structures",
+        image: ["/Images/ProjectsImages/Avenue1.jpg"],
         heading: "AVENUE 210 - NALASOPARA",
         tagline: "Where Elegance Meets Functionality",
         description: <>
@@ -120,7 +125,8 @@ const ProjectsData = [
     },
     {
         id: 5,
-        image: "/images/projects/project5.jpg",
+        image: "/Images/projects/project5.jpg",
+        category: "Building Structures",
         heading: "SUYASH - VERSOVA",
         tagline: "The Gateway of Tomorrow",
         description: <>
@@ -174,7 +180,8 @@ const ProjectsData = [
     },
     {
         id: 6,
-        image: "/images/projects/project6.jpg",
+        category: "Building Structures",
+        image: ["/Images/ProjectsImages/laxmiTower1.jpg"],
         heading: "LAXMI TOWER - VIRAR (E)",
         tagline: "Relaxation Redefined",
         description: <>
@@ -203,7 +210,8 @@ const ProjectsData = [
     },
     {
         id: 7,
-        image: "/images/projects/project7.jpg",
+        category: "Building Structures",
+        image: ["/Images/ProjectsImages/ShivanshHeight1.jpg"],
         heading: "SHIVANSH HEIGHTS - VIRAR (E)",
         tagline: "Engineering the Future",
         description: <>
@@ -235,6 +243,7 @@ const ProjectsData = [
     },
     {
         id: 8,
+        category: "Building Structures",
         image: [
             "/Images/ProjectsImages/MASJIDSADAT1.jpg",
             "/Images/ProjectsImages/MASJIDSADAT2.jpg",
@@ -267,7 +276,8 @@ const ProjectsData = [
     },
     {
         id: 9,
-        image: "/images/projects/project9.jpg",
+        category: "International Projects",
+        image: "/Images/projects/project9.jpg",
         heading: "EWAN SEDRA - 3 - RIYADH, SAUDI ARABIA",
         tagline: "Nature in the City",
         description: <>
@@ -287,7 +297,8 @@ const ProjectsData = [
     },
     {
         id: 10,
-        image: "/images/projects/project10.jpg",
+        category: "Hospitality Structures",
+        image: "/Images/projects/project10.jpg",
         heading: "PEE-KAA-BOO HOUSE - KARJAT",
         tagline: "Celebrating Heritage",
         description: <>
@@ -312,11 +323,12 @@ const ProjectsData = [
     },
     {
         id: 11,
+        category: "International Projects",
         image: [
             "/Images/ProjectsImages/SKYLIGHTROOF1.png",
             "/Images/ProjectsImages/SKYLIGHTROOF2.png",
             "/Images/ProjectsImages/SKYLIGHTROOF3.png",
-            "/Images/ProjectsImages/SKYLIGHTROOF4.png"
+            "/Images/ProjectsImages/SKYLIGHTROOF4.jpg"
         ],
         heading: "SKYLIGHT ROOF OVER COURTYARD - RIYADH, SAUDI ARABIA",
         tagline: "Celebrating Heritage",
@@ -338,6 +350,7 @@ const ProjectsData = [
     },
     {
         id: 12,
+        category: "⁠Industrial Structures",
         image: [
             "/Images/ProjectsImages/NIONOPAPERMILL1.jpeg",
             "/Images/ProjectsImages/NIONOPAPERMILL2.jpeg",
@@ -363,6 +376,7 @@ const ProjectsData = [
     },
     {
         id: 12,
+        category: "⁠Industrial Structures",
         image: [
             "Images/ProjectsImages/TGIFFILMSTUDIO1.jpg",
             "Images/ProjectsImages/TGIFFILMSTUDIO2.jpg",
@@ -381,7 +395,8 @@ const ProjectsData = [
     },
     {
         id: 13,
-        image: "/images/projects/project10.jpg",
+        category: "Infrastructures",
+        image: "/Images/projects/project10.jpg",
         heading: "ETP PLANT AT BOKARO FOR SAIL",
         tagline: "Celebrating Heritage",
         description: <>

@@ -119,9 +119,10 @@
     color: white;
 }
 
-.CopywriteText svg{
+.CopywriteText svg {
     font-size: 25px;
 }
+
 @media (max-width:900px) {
     .CopywriteText {
         border-top: 0.5px solid rgba(255, 255, 255, 0.255);
@@ -132,6 +133,7 @@
         position: sticky;
         z-index: 55;
         flex-direction: column;
+        gap: 10px;
     }
 
     #FooterContainer .NavigationLinksContainer {

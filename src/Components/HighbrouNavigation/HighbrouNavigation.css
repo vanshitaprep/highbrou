@@ -169,7 +169,7 @@
     flex-direction: column;
     background-color: white;
     padding: 10px 0px;
-    gap: 10px;
+    gap: 5px;
 }
 
 /* .dropdown li:hover::before{
@@ -221,6 +221,18 @@
 
 /* Mobile View */
 @media (max-width: 768px) {
+    .NavPanel a {
+        font-size: 20px;
+    }
+
+    .ant-collapse-header-text {
+        font-size: 20px;
+    }
+
+    .ant-collapse-header {
+        align-items: center !important;
+    }
+
     .NavigationBarContainer {
         display: flex;
         justify-content: center;

@@ -20,24 +20,24 @@ const WhatWeDoHome = () => {
                                 {WhatWeDoCardsData.map((item, index) => (
                                     <Col key={index} lg={8} md={12}>
                                         <Link to="/services">
-                                        <div className="BorderHoverCard">
-                                            <div className="HoverableCardImage">
-                                                <img src={item.img} alt="" />
-                                            </div>
-                                            <div className="HoverableCardContent">
-                                                <span>{item.tagline}</span>
-                                                <h2>{item.title}</h2>
+                                            <div className="BorderHoverCard">
+                                                <div className="HoverableCardImage">
+                                                    <img src={item.img} alt={item.title} />
+                                                </div>
+                                                <div className="HoverableCardContent">
+                                                    <span>{item.tagline}</span>
+                                                    <h2>{item.title}</h2>
 
+                                                </div>
+                                                <hr />
                                             </div>
-                                            <hr />
-                                        </div>
                                         </Link>
                                     </Col>
                                 ))}
 
                             </Row>
                             <br /><br />
-                           <Link to="/allprojects"> <button className="AnimatedBtnContainer">All Projects<MdOutlineArrowRight /></button></Link>
+                            <Link to="/allprojects"> <button className="AnimatedBtnContainer">All Projects<MdOutlineArrowRight /></button></Link>
                         </div>
                     </div>
                 </div>

@@ -11,19 +11,19 @@ const NavigationLinks = [
         link: "Projects +",
         sublinks: [
             {
-                link: "Building",
+                link: "Building Structures",
                 path: "/allprojects"
             },
             {
-                link: "Hospitality",
+                link: "Hospitality Structures",
                 path: "/allprojects"
             },
             {
-                link: "Commertial",
+                link: "⁠Commercial Structures",
                 path: "/allprojects"
             },
             {
-                link: "Industrial Structures",
+                link: "⁠Industrial Structures",
                 path: "/allprojects"
             },
             {
@@ -47,7 +47,7 @@ const NavigationLinks = [
     },
     {
         link: "Our Approach",
-        path: ""
+        path: "/our-approach"
     },
     {
         link: "Career",

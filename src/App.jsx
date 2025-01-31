@@ -10,6 +10,7 @@ import Footer from "./Components/Footer/Footer";
 import Career from "./Components/Careers/Carrer";
 import BackToTop from "./Components/BackToTop/BackToTop";
 import Contact from "./Components/Contact/Contact";
+import OurApproach from "./Components/OurApproach/OurApproach";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/allprojects" element={<AllProjects />} />
         <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/our-approach" element={<OurApproach />} />
       </Routes>
       <Footer />
       <BackToTop/>
