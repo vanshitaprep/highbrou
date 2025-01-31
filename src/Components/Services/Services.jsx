@@ -5,7 +5,7 @@ import WhatWeDoCardsData from "../WhatWeDoHome/WhatWeDoData";
 import "./Services.css";
 import SectorsWeServe from "../SectorsWeServe/SectorsWeServe";
 import Expertise from "../Expertise/Expertise";
-
+import ServicesTopComImage from "./ServicesTopComImage.jpg"
 const Services = () => {
     const [activeImage, setActiveImage] = useState(WhatWeDoCardsData[0].img); // Default to the first image
 
@@ -23,7 +23,7 @@ const Services = () => {
                 <CommonTopBannerDynamic
                     heading="Services"
                     subheading="High Standards, Innovative Solutions"
-                    image="https://img.freepik.com/free-photo/construction-silhouette_1127-2991.jpg?t=st=1737616348~exp=1737619948~hmac=6179e21b22c8ea115707f24b48bcad8ace8f1d993a804402dac214ea8e7db48a&w=2000"
+                    image={ServicesTopComImage}
                 />
                 <div className="sectionPadding" style={{ paddingBottom: "0px" }}>
                     <div>

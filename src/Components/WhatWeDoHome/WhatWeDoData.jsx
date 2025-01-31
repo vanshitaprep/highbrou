@@ -1,3 +1,5 @@
+import ValueEngineering from "./ValueEngineering.jpg"
+import PeerReview from "./PeerReview.jpg"
 const WhatWeDoCardsData = [
     {
         img: "https://images.pexels.com/photos/258160/pexels-photo-258160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -18,7 +20,7 @@ const WhatWeDoCardsData = [
         </>
     },
     {
-        img: "https://plus.unsplash.com/premium_photo-1661335257817-4552acab9656?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        img: PeerReview,
         title: "PEER REVIEW",
         tagline: "Our Peer Review Service ensures :",
         descriptionDetails: <>
@@ -33,7 +35,7 @@ const WhatWeDoCardsData = [
         </>
     },
     {
-        img: "https://images.pexels.com/photos/2263514/pexels-photo-2263514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        img: ValueEngineering,
         title: "VALUE ENGINEERING",
         tagline: "Our Value Engineering service employs:",
         descriptionDetails: <>

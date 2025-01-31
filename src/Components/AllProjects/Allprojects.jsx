@@ -4,6 +4,7 @@ import "./ProjectsPage.css"
 import { Modal, Row, Col, Carousel, Image } from "antd";
 import ProjectsData from "./ProjectsData";
 import NavigationLinks from "../HighbrouNavigation/NavigationLinks";
+import AllProjectsTopComBanner from "./AllProjectsTopComBanner.jpg"
 const AllProjects = () => {
     const projectCategory = NavigationLinks.find(link => link.link === "Projects +");
 
@@ -33,7 +34,7 @@ const AllProjects = () => {
                 <CommonTopBannerDynamic
                     heading="Our Projects"
                     subheading="Our Works, Our Standards"
-                    image="https://img.freepik.com/free-photo/construction-site-silhouettes_1127-2990.jpg?t=st=1737616296~exp=1737619896~hmac=540a3debb5585273f0e4171b9ba7ba2d8368d09280cd4a146b3ec8ce03f20446&w=1800"
+                    image={AllProjectsTopComBanner}
                 />
                 <div>
                     <div className="sectionPadding">
