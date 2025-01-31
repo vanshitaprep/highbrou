@@ -1,19 +1,33 @@
 import React, { useEffect, useState } from "react";
 import CommonTopBannerDynamic from "../CommonTopBanner/CommonTopBannerDynamic";
-import "./ProjectsPage.css"
-import { Modal, Row, Col, Carousel, Image } from "antd";
+import "./ProjectsPage.css";
+import { Modal, Row, Col, Image, Checkbox } from "antd";
 import ProjectsData from "./ProjectsData";
 import NavigationLinks from "../HighbrouNavigation/NavigationLinks";
-import AllProjectsTopComBanner from "./AllProjectsTopComBanner.jpg"
+import AllProjectsTopComBanner from "./AllProjectsTopComBanner.jpg";
+import { CiFilter } from "react-icons/ci";
+
 const AllProjects = () => {
     const projectCategory = NavigationLinks.find(link => link.link === "Projects +");
 
     // State for Modal
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
+    const [isFilterVisible, setIsFilterVisible] = useState(false);
+    const [isFilterModalVisible, setIsFilterModalVisible] = useState(false);
+    const [selectedCategories, setSelectedCategories] = useState([]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
+
+        const handleScroll = () => {
+            if (window.innerWidth <= 768) {
+                setIsFilterVisible(window.scrollY > 300);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     // Open Modal with Selected Project
@@ -28,6 +42,16 @@ const AllProjects = () => {
         setSelectedProject(null);
     };
 
+    // Handle Category Selection
+    const handleCategoryChange = (checkedValues) => {
+        setSelectedCategories(checkedValues);
+    };
+
+    // Filtered Projects Based on Selected Categories
+    const filteredProjects = selectedCategories.length > 0
+        ? ProjectsData.filter(project => selectedCategories.includes(project.category))
+        : ProjectsData;
+
     return (
         <>
             <section id="AllProjectsPageContainer">
@@ -37,36 +61,47 @@ const AllProjects = () => {
                     image={AllProjectsTopComBanner}
                 />
                 <div>
-                    <div className="sectionPadding">
+                    <div className="sectionPadding" style={{ position: "relative" }}>
                         <h2 className="ProjectsSectionHeading">Our Portfolio</h2>
+
                         <div className="AnimatedScrollingCards">
                             <div>
                                 <Row>
                                     <Col lg={10}>
                                         <div className="ProjectsNamesCategoriesContainer">
-                                            <ul>
-                                                {projectCategory?.sublinks.map((subcategory, index) => (
-                                                    // <div className="CategoryItem" >
-                                                    <li key={index}>{subcategory.link}</li>
-                                                    // </div>
-                                                ))}
-                                            </ul>
+                                            <h3 style={{ color: "black" }}>Total Projects: {filteredProjects.length}</h3>
+                                            <Checkbox.Group
+                                                style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+                                                onChange={handleCategoryChange}
+                                                value={selectedCategories}
+                                            >
+                                                <ul>
+                                                    {projectCategory?.sublinks.map((subcategory, index) => (
+                                                        <Checkbox key={index} value={subcategory.link}>
+                                                            <li >{subcategory.link}</li>
+                                                        </Checkbox>
+                                                    ))}
+                                                </ul>
+                                            </Checkbox.Group>
+
 
                                         </div>
                                     </Col>
-                                    <Col lg={14}>
-                                        {ProjectsData.map((item, index) => (
-                                            <div className="ProjectsCardsContainer" key={index} onClick={() => showModal(item)} style={{ cursor: "pointer" }}>
+                                    <Col lg={14} style={{ width: "100%" }}>
+                                        {filteredProjects.map((item, index) => (
+                                            <div
+                                                className="ProjectsCardsContainer"
+                                                key={index}
+                                                onClick={() => showModal(item)}
+                                                style={{ cursor: "pointer" }}
+                                            >
                                                 <div className="heightContainer">
-                                                    <div className="OverlayContainerShadow">
-
-                                                    </div>
+                                                    <div className="OverlayContainerShadow"></div>
                                                     {Array.isArray(item.image) && item.image.length > 0 && (
                                                         <img src={item.image[0]} alt={item.heading} />
                                                     )}
                                                     <div className="HoverContainerContainer">
                                                         <h2>{item.heading}</h2>
-                                                        {/* <p>{item.description}</p> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -75,27 +110,28 @@ const AllProjects = () => {
                                 </Row>
                             </div>
                             <Modal
-                                title={selectedProject?.heading} // Dynamic Title
+                                title={selectedProject?.heading}
                                 open={isModalVisible}
                                 onCancel={handleCancel}
-                                footer={null} // No footer buttons
-                                width={1000} // Adjust modal width
+                                footer={null}
+                                width={1000}
                             >
+
                                 {selectedProject && (
                                     <div>
                                         <div style={{ display: "flex", flexWrap: "wrap", padding: "5px" }}>
+
                                             {Array.isArray(selectedProject?.image) ? (
-                                              <>
+                                                <>
                                                     {selectedProject.image.map((imgSrc, imgIndex) => (
                                                         <Image
                                                             className="ModalInsideGalleryImage"
                                                             key={imgIndex}
                                                             src={imgSrc}
-                                                        
                                                             alt={`${selectedProject.heading} - ${imgIndex + 1}`}
                                                         />
                                                     ))}
-                                               </>
+                                                </>
                                             ) : (
                                                 <Image
                                                     className="ModalInsideGalleryImage"
@@ -103,19 +139,64 @@ const AllProjects = () => {
                                                     alt={selectedProject?.heading}
                                                 />
                                             )}
-
                                         </div>
-                                        {/* <p><b>Tagline:</b> {selectedProject.tagline}</p> */}
                                         <p><b>Description:</b></p>
-                                        {selectedProject.description} {/* Renders the JSX description */}
+                                        {selectedProject.description}
                                     </div>
                                 )}
                             </Modal>
                         </div>
+
+                        {/* Floating Filter Button for Mobile */}
+                        {isFilterVisible && (
+                            <button
+                                className="FloatingFilterButton"
+                                onClick={() => setIsFilterModalVisible(true)}
+                            >
+                                <CiFilter />
+                            </button>
+                        )}
+
+                        {/* Filter Modal */}
+                        <Modal
+                            title="Filter by Category"
+                            open={isFilterModalVisible}
+                            onCancel={() => setIsFilterModalVisible(false)}
+                            closable={false}  // Removes the close (X) button
+                            footer={null}  // Removes the default footer
+                        >
+                            <h3 style={{ color: "black" }}>Total Projects: {filteredProjects.length}</h3>
+                            <br />
+                            <Checkbox.Group
+                                style={{ display: "flex", flexDirection: "column", gap: "20px" }}
+                                onChange={handleCategoryChange}
+                                value={selectedCategories}
+                            >
+                                {projectCategory?.sublinks.map((subcategory, index) => (
+                                    <Checkbox key={index} value={subcategory.link}>
+                                        {subcategory.link}
+                                    </Checkbox>
+                                ))}
+                            </Checkbox.Group>
+
+                            {/* Apply Button */}
+                            <div style={{ marginTop: "20px", textAlign: "right",display:"flex",justifyContent:"end" }}>
+                                <button
+                                     className="AnimatedBtnContainer"
+                                    onClick={() => setIsFilterModalVisible(false)}  // Close modal on click
+                                >
+                                    Apply
+                                </button>
+                            </div>
+                        </Modal>
+
                     </div>
                 </div>
-            </section>
+            </section >
+
+
         </>
-    )
-}
-export default AllProjects
+    );
+};
+
+export default AllProjects;
