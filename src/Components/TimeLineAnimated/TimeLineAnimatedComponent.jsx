@@ -50,7 +50,8 @@ const TimeLineAnimatedComponent = () => {
             <section id="TimeLineAnimatedContainer">
 
                 <div className="sectionPadding">
-                    <h2 className="TimelineSectionHeading">Our Journey Through Time</h2>
+                    <h2 className="TimelineSectionHeading" data-aos="fade-up"
+     data-aos-duration="1000">Our Journey Through Time</h2>
                     {/* <div className="AbsoluteContainer">
                         <img src={HighbroTimeLinePc} alt="" className="TimelineImageonPc" />
                         <div>

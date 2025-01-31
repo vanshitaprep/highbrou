@@ -10,8 +10,10 @@ const CommonTopBannerDynamic = ({ heading, subheading, image }) => {
                     <img src={image} alt="Banner Background" />
                     <div className="taglineContentContainer">
                         <div className="sectionPadding TopBannerSpanAdjust">
-                            <span>{heading}</span>
-                            <h2>{subheading}</h2>
+                            <span data-aos="fade-up"
+     data-aos-duration="1000">{heading}</span>
+                            <h2 data-aos="fade-up"
+     data-aos-duration="1500">{subheading}</h2>
                         </div>
                     </div>
                 </div>

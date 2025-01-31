@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import CommonTopBannerDynamic from "../CommonTopBanner/CommonTopBannerDynamic";
 import { Row, Col, Modal, Form, Input, Button, message } from "antd";
 import { MdOutlineArrowRight } from "react-icons/md";
@@ -60,7 +60,7 @@ const Career = () => {
                     width={800}
                 >
                     <Form
-                      
+
                         layout="vertical"
                         initialValues={{}}
                     >
@@ -195,9 +195,9 @@ const Career = () => {
                             <Input type="file" accept=".pdf" />
                         </Form.Item>
 
-                        <Button type="primary" htmlType="submit" style={{ width: "100%" }}>
+                        <button className="AnimatedBtnContainer" htmlType="submit" >
                             Submit Application
-                        </Button>
+                        </button>
                     </Form>
                 </Modal>
             </section>

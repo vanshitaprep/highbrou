@@ -10,14 +10,17 @@ const HighbrouMissionVision = () => {
                         <Row>
                             <Col lg={24}>
                                 <div className="MissionVisionPageTaglineHeading">
-                                    <span> &nbsp;Innovation, Sustainability, Precision, and Client-Centricity</span>
-                                    <h2>Empowering the Future of Infrastructure</h2>
+                                    <span data-aos="fade-up"
+                                        data-aos-duration="1000"> &nbsp;Innovation, Sustainability, Precision, and Client-Centricity</span>
+                                    <h2 data-aos="fade-up"
+                                        data-aos-duration="1500">Empowering the Future of Infrastructure</h2>
                                 </div>
                             </Col>
                             <Col lg={24}>
                                 <div>
                                     <div>
-                                        <div className="MissionContainer">
+                                        <div className="MissionContainer" data-aos="fade-up"
+     data-aos-duration="1000">
                                             <div className="MissionIconContainer">
                                                 <img src="/Images/fluent_target-arrow-20-filled (1).svg" alt="" />
                                             </div>
@@ -26,7 +29,8 @@ const HighbrouMissionVision = () => {
                                                 <p>Our mission is to deliver world-class structural solutions that address our clients' unique challenges, combining precision engineering with an innovative problem-solving approach. We aim to create sustainable, resilient, and efficient structures that balance design, functionality, and durability.</p>
                                             </div>
                                         </div>
-                                        <div className="VisionContainer">
+                                        <div className="VisionContainer" data-aos="fade-up"
+     data-aos-duration="1500">
                                             <div className="VisionIconContainer">
                                                 <img src="/Images/humbleicons_bulb (1).svg" alt="" />
                                             </div>

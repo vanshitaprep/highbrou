@@ -29,8 +29,8 @@ const HomePageAbout = () => {
                             <div className="AboutContentContainer">
                                 <div>
                                     <span>About us?</span>
-                                    <h1>We conduct all business with the highest standards</h1>
-                                    <p>At Highbrou Engineering, we specialize in turning visionary concepts into enduring and impactful structures. With more than a decade of expertise in structural engineering, we excel in crafting precision-driven solutions tailored to diverse project needs.
+                                    <h1>Your Dream Engineering Partner</h1>
+                                    <p>At Highbrou Engineering Pvt. Ltd, we specialize in turning visionary concepts into enduring and impactful structures. With more than a decade of expertise in structural engineering, we excel in crafting precision-driven solutions tailored to diverse project needs.
                                     </p>
                                     <p>Our portfolio spans high-rise buildings, intricate industrial facilities, hospitality venues, and government infrastructure. Each project reflects our unwavering commitment to quality, innovation, and resilience.</p>
                                    <Link to="/about-us"> <button className="AnimatedBtnContainer">Learn More<MdOutlineArrowRight /></button></Link>

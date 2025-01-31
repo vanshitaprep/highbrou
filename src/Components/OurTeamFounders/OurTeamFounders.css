@@ -37,7 +37,7 @@
 .FounderAnimatedCard {
     position: relative;
     overflow: hidden;
-    margin: 20px;
+    margin: 10px;
     height: 100%;
     border-radius: 20px;
 }
@@ -127,6 +127,14 @@
     display: inline-block;
 }
 
+.FoundersAnimatedCards .ant-row .ant-col:first-child {
+    padding-left: 0px !important;
+}
+
+.FoundersAnimatedCards .ant-row .ant-col {
+    padding-right: 10px;
+}
+
 .ModalFounderImage {
     width: 100%;
     border-radius: 20px;
@@ -141,6 +149,113 @@
 }
 
 
+.OurInverstorsContentContainer>div {
+    background-color: rgb(245, 245, 245);
+    min-height: 400px;
+    border-radius: 20px;
+}
+
+.InverstorsTeamContainerContent {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* width: 100%; */
+    padding: 0px 30px;
+}
+
+.InverstorsTeamContainerContent h2 {
+    color: rgb(13, 42, 59);
+    letter-spacing: -1.4px;
+    margin-top: 0;
+    margin-bottom: 26px;
+    font-weight: 500;
+    line-height: 107%;
+    margin-top: 10px;
+}
+
+.OurInverstorsContentContainer .ant-row {
+    min-height: 400px;
+}
+
+#InvestorsCardSwiperContainer {
+    height: 100%;
+}
+
+.InvestorImage {
+    height: 350px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.InvestorImage:hover img {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.InvestorImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.InvestorsCardFormat {
+    background-color: #0E2A3A;
+    height: 100%;
+}
+
+.InvestorsNameAndContent {
+    padding: 0px 10px;
+}
+
+.FounderImageContainer {
+    width: 45%;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.FounderInfo {
+    width: 55%;
+    color: black;
+}
+
+.FounderImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#FounderCardMainContainer {
+    display: flex;
+    gap: 20px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+    overflow: hidden;
+}
+
+.FounderInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.FounderInfo h2 {
+    margin-top: 0px;
+}
+
+.FoundersAnimatedCards .ant-row .ant-col .FounderInfo div:last-child {
+    display: flex;
+    gap: 10px;
+}
+
+.FoundersAnimatedCards .ant-row .ant-col .FounderInfo div:last-child svg {
+    font-size: 20px;
+    /* color: #2989BC; */
+    /* padding: 10px; */
+}
 
 @media (min-width:1500px) and (max-width:4000px) {
     .FounderAnimatedCard {

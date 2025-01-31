@@ -2,8 +2,16 @@ import React, { useState } from "react";
 import "./OurTeamFounders.css";
 import { Row, Col, Modal } from "antd";
 import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
+import { FaInstagramSquare } from "react-icons/fa";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+// import required modules
+import { Autoplay, Pagination } from 'swiper/modules';
 const OurTeamFounders = () => {
     const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
     const [selectedFounder, setSelectedFounder] = useState(null); // Selected founder details
@@ -12,6 +20,7 @@ const OurTeamFounders = () => {
         {
             memberName: "SAYYAD WAJED ALI",
             position: "FOUNDER",
+            tagline: "Structural Engineer with 10+ years of expertise in high-rises and infrastructure.",
             image: "/Images/team1.webp",
             qualificationDetails: (
                 <div>
@@ -50,6 +59,36 @@ const OurTeamFounders = () => {
         setSelectedFounder(null); // Clear selected founder details
     };
 
+    const InverstorsDetails = [
+        {
+            image: "",
+            name: "Investors Name",
+        },
+        {
+            image: "",
+            name: "Investors Name",
+        },
+        {
+            image: "",
+            name: "Investors Name",
+        },
+        {
+            image: "",
+            name: "Investors Name",
+        },
+        {
+            image: "",
+            name: "Investors Name",
+        },
+        {
+            image: "",
+            name: "Investors Name",
+        },
+        {
+            image: "",
+            name: "Investors Name",
+        }
+    ]
     return (
         <>
             <section>
@@ -60,9 +99,9 @@ const OurTeamFounders = () => {
                             <h2>Our Founders</h2>
                         </div>
                         <div className="FoundersAnimatedCards">
-                            <Row>
+                            {/* <Row>
                                 {FoundersData.map((item, index) => (
-                                    <Col lg={12} md={24} key={index} style={{ width: "100%" }}>
+                                    <Col lg={10} md={24} key={index} style={{ width: "100%" }}>
                                         <div
                                             className="FounderAnimatedCard"
                                             onClick={() => showModal(item)} // Open modal on click
@@ -84,10 +123,94 @@ const OurTeamFounders = () => {
                                         </div>
                                     </Col>
                                 ))}
+                            </Row> */}
+                            <Row>
+                                {FoundersData.map((item, index) => (
+                                    <Col lg={12} md={24} key={index} style={{ width: "100%" }}   data-aos="fade-up"
+                                    data-aos-delay={`${index * 200}`}>
+                                        <div
+
+                                            onClick={() => showModal(item)} // Open modal on click
+                                            style={{ cursor: "pointer" }}
+                                            id="FounderCardMainContainer"
+                                        >
+
+                                            <div className="FounderImageContainer">
+                                                <img src={item.image} alt={item.memberName} />
+                                            </div>
+                                            <div className="FounderInfo">
+                                                <div>
+                                                    <span>{item.position}</span>
+                                                    <h2>{item.memberName}</h2>
+                                                    <p>{item.tagline}</p>
+                                                </div>
+                                                <div>
+                                                    <FaFacebookSquare />
+                                                    <FaLinkedin />
+                                                    <FaInstagramSquare />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                ))}
                             </Row>
                         </div>
+                        <br /><br /><br />
+                        <div className="OurInverstorsContentContainer">
+                            <div>
+                                <Row>
+                                    <Col lg={10}>
+                                        <div className="InverstorsTeamContainerContent">
+                                            <div>
+                                                <h2>Our Investors Team</h2>
+                                                <p>We’re on the lookout for passionate, forward-thinking individuals who are eager to make an impact.</p>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col lg={14}>
+                                        <div id="InvestorsCardSwiperContainer">
+                                            <Swiper
+                                                slidesPerView={2}
+                                                spaceBetween={30}
+                                                loop={true}
+                                                autoplay={{
+                                                    delay: 2500,
+                                                    disableOnInteraction: false,
+                                                }}
+                                                // pagination={{
+                                                //     clickable: true,
+                                                // }}
+                                                modules={[Autoplay, Pagination]}
+                                                className="mySwiper"
+                                                style={{ height: "100%" }}
+                                            >
+                                                {InverstorsDetails.map((item, index) => (
+                                                    <SwiperSlide key={index}>
+                                                        <div className="InvestorsCardFormat">
+                                                            <div>
+                                                                <div className="InvestorImage">
+                                                                    <img src="https://plus.unsplash.com/premium_photo-1683134127869-a0aa8f8db043?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                                                                </div>
+                                                                <div className="InvestorsNameAndContent">
+                                                                    <h2>{item.name}</h2>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </SwiperSlide>
+                                                ))}
+
+                                            </Swiper>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </div>
                     </div>
+                    {/* <div className="sectionPadding"> */}
+
+                    {/* </div> */}
                 </div>
+
 
                 {/* Ant Design Modal */}
                 <Modal
@@ -95,7 +218,7 @@ const OurTeamFounders = () => {
                     open={isModalOpen}
                     onCancel={handleCloseModal}
                     footer={null}
-                    width={700}
+                    width={500}
                 >
                     {selectedFounder && (
                         <>
@@ -113,7 +236,7 @@ const OurTeamFounders = () => {
                         </>
                     )}
                 </Modal>
-            </section>
+            </section >
         </>
     );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import "./ValuesGoals.css"
+import GoalsBack from "./GoalsBack.jpg"
 const ValuesandGoals = () => {
     return (
         <>
@@ -8,13 +9,16 @@ const ValuesandGoals = () => {
 
                     <div className="AnimatedStikcyContainer">
                         <div className="ValuesGoalsMainheading">
-                            <h2>Core Values and Strategic Goals
+                            <h2 data-aos="fade-up"
+                                data-aos-duration="1000">Core Values and Strategic Goals
                             </h2>
-                            <p>Our values are the foundation of our success.
+                            <p data-aos="fade-up"
+                                data-aos-duration="1300">Our values are the foundation of our success.
                                 Empowering progress with every decision we make.</p>
                         </div>
                         <div className="StickyCards">
-                            <div>
+                            <div data-aos="fade-up"
+     data-aos-duration="1000">
                                 <div className="BlackOverlayColor">
 
                                 </div>
@@ -31,11 +35,11 @@ const ValuesandGoals = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div >
                                 <div className="BlackOverlayColor">
 
                                 </div>
-                                <img src="https://images.pexels.com/photos/24778328/pexels-photo-24778328/free-photo-of-business-towers-in-malaysia.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" />
+                                <img src={GoalsBack} alt="" />
                                 <div className="GoalsContentContainer">
 
                                     <div>

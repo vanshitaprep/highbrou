@@ -15,7 +15,7 @@ import OurApproach from "./Components/OurApproach/OurApproach";
 function App() {
   return (
     <Router>
-      <HighbrouNavigation />
+      <HighbrouNavigation  />
       <Routes>
         <Route path="/" element={<HomeRoutes />} />
         <Route path="/about-us" element={<AboutUs />} />

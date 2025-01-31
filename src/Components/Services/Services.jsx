@@ -22,7 +22,7 @@ const Services = () => {
             <section id="ServicesContainer">
                 <CommonTopBannerDynamic
                     heading="Services"
-                    subheading="High Standards, Innovative Solutions"
+                    subheading="Empowering The Future Of Infrastructure"
                     image={ServicesTopComImage}
                 />
                 <div className="sectionPadding" style={{ paddingBottom: "0px" }}>

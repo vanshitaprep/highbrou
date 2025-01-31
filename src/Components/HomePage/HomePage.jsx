@@ -67,12 +67,13 @@ const HomePage = () => {
                     </div>
                     <div className="HeightContainer">
                         <div className="headingContainer">
-                            <h1>Creating timeless designs for modern living</h1>
+                            <h1>Structural visions soar, <span>Innovation at our core,</span>  From skyline to span,<span> We engineer the plan</span></h1>
                         </div>
                         <div className="HoverTextPoints">
                             <Row style={{ width: "100%" }}>
                                 <Col lg={6} md={12} style={{ width: "100%" }}>
-                                    <div className="HoverItem">
+                                    <div className="HoverItem" data-aos="fade-up"
+     data-aos-duration="1000">
                                         <div>
                                             <h4>CUTTING EDGE DESIGN</h4>
                                             <FaArrowRightLong />
@@ -85,8 +86,9 @@ const HomePage = () => {
                                 </Col>
                                 <Col lg={6} md={12} style={{ width: "100%" }}>
 
-                                    <div className="HoverItem">
-                                        <h4>PECISION ENGINEERING</h4>
+                                    <div className="HoverItem" data-aos="fade-up"
+     data-aos-duration="1500">
+                                        <h4>PRECISION ENGINEERING</h4>
                                         <FaArrowRightLong />
                                         <div className="HoverContainer">
                                             <p>We Deliver accuracy down to the milimeter, ensuring perfect execution every time.</p>
@@ -95,7 +97,8 @@ const HomePage = () => {
                                     </div>
                                 </Col>
                                 <Col lg={6} md={12} style={{ width: "100%" }}>
-                                    <div className="HoverItem">
+                                    <div className="HoverItem" data-aos="fade-up"
+     data-aos-duration="2000">
                                         <h4>SUSTAINABLE SOLUTIONS</h4>
                                         <FaArrowRightLong />
                                         <div className="HoverContainer">
@@ -105,7 +108,8 @@ const HomePage = () => {
                                     </div>
                                 </Col>
                                 <Col lg={6} md={12} style={{ width: "100%" }}>
-                                    <div className="HoverItem">
+                                    <div className="HoverItem" data-aos="fade-up"
+     data-aos-duration="2500">
                                         <h4>RAPID DELIVERY </h4>
                                         <FaArrowRightLong />
                                         <div className="HoverContainer">

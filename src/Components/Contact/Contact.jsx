@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import "./Contact.css"
 import CommonTopBannerDynamic from "../CommonTopBanner/CommonTopBannerDynamic";
 import { Row, Col } from "antd";
@@ -15,17 +15,17 @@ const Contact = () => {
                     image="https://images.unsplash.com/photo-1705233844148-c554578cb64b?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 />
                 <div>
-                    <div className="sectionPadding">
+                    <div className="sectionPadding"> 
                         <div className="ContactMapContainers">
                             <Row>
                                 <Col lg={12} md={24}>
                                     <div>
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.432927403572!2d72.83481317554114!3d19.1325176820837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b73c5242d02d%3A0x830f8cb8100ea9d9!2sAmbrosia%20Designs%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1737977644081!5m2!1sen!2sin" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.432927403572!2d72.83481317554114!3d19.1325176820837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b73c5242d02d%3A0x830f8cb8100ea9d9!2sAmbrosia%20Designs%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1737977644081!5m2!1sen!2sin" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                     </div>
                                 </Col>
                                 <Col lg={12} md={24}>
                                     <div>
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.6250942472197!2d75.34347627555914!3d19.898046581483268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba2a8dbbc0ebf%3A0x640b651e020e4dbf!2sHighbrou%20Engineering%20Private%20Limited!5e0!3m2!1sen!2sin!4v1737977672788!5m2!1sen!2sin" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.6250942472197!2d75.34347627555914!3d19.898046581483268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba2a8dbbc0ebf%3A0x640b651e020e4dbf!2sHighbrou%20Engineering%20Private%20Limited!5e0!3m2!1sen!2sin!4v1737977672788!5m2!1sen!2sin" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                     </div>
                                 </Col>
                             </Row>
