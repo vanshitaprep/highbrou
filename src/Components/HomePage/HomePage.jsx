@@ -5,11 +5,13 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import CarousalImage1 from "./CarousalImage1.jpeg"
 import CarousalImage2 from "./CarousalImage2.jpeg"
 import Homeback from "./Homeback.jpg"
+import CarousalImage3 from "./CarousalImage3.jpg"
+import CarousalImage4 from "./CarousalImage4.jpg"
 const imageUrls = [
     Homeback,
-    "https://plus.unsplash.com/premium_photo-1661335257817-4552acab9656?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1705233844656-d05196a4fa30?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    CarousalImage1,
+    CarousalImage4,
+    CarousalImage3,
+    // CarousalImage1,
     CarousalImage2,
 ];
 
