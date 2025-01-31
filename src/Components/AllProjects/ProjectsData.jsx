@@ -33,7 +33,7 @@ const ProjectsData = [
     {
         id: 2,
         category: "Building Structures",
-        image: ["/Images/ProjectsImages/project2.jpg"],
+        image: ["/Images/ProjectsImages/ROOHISOLITAIRE.png"],
         heading: "ROOHI SOLITAIRE - VILLE PARLE",
         tagline: "Connecting Communities",
         description: <>
@@ -57,7 +57,7 @@ const ProjectsData = [
     },
     {
         id: 3,
-        image: ["/Images/ProjectsImages/project3.jpg"],
+        image: ["/Images/ProjectsImages/THESKYHEAVEN.png"],
         category: "Building Structures",
         heading: "THE SKY HEAVEN - ANDHERI (W)",
         tagline: "Living in Harmony with Nature",
@@ -125,7 +125,7 @@ const ProjectsData = [
     },
     {
         id: 5,
-        image: ["/Images/ProjectsImages/project5.jpg"],
+        image: ["/Images/ProjectsImages/SUYASH.png"],
         category: "Building Structures",
         heading: "SUYASH - VERSOVA",
         tagline: "The Gateway of Tomorrow",
@@ -277,7 +277,7 @@ const ProjectsData = [
     {
         id: 9,
         category: "International Projects",
-        image: ["/Images/ProjectsImages/project9.jpg"],
+        image: ["/Images/ProjectsImages/EWANSEDRA2.png"],
         heading: "EWAN SEDRA - 3 - RIYADH, SAUDI ARABIA",
         tagline: "Nature in the City",
         description: <>
@@ -298,7 +298,7 @@ const ProjectsData = [
     {
         id: 10,
         category: "Hospitality Structures",
-        image: ["/Images/ProjectsImages/project10.jpg"],
+        image: ["/Images/ProjectsImages/PEEKAABOOHOUSE.png"],
         heading: "PEE-KAA-BOO HOUSE - KARJAT",
         tagline: "Celebrating Heritage",
         description: <>
