@@ -76,10 +76,10 @@
         min-height: 130px;
         padding: 10px;
     }
-}
-.BackImageBackWhyUs{
-    max-height: 400px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
+    .BackImageBackWhyUs{
+        max-height: 400px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
 }
