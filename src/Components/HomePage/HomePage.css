@@ -162,9 +162,9 @@
 
 .headingContainer h1 {
     text-align: start;
-    font-size: 60px;
+    font-size: 40px;
     width: 70%;
-    line-height: 70px;
+    line-height: 50px;
     /* padding: 0px 20px; */
 }
 
@@ -193,6 +193,13 @@
     border-radius: 50%;
 }
 
+.HoverItem .Icon{
+    width: 20px;
+    height: 20px;
+    position: static;
+    margin-right: 5px;
+    display: none;
+}
 
 
 .carousel-image.visible {

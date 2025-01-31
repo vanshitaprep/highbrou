@@ -7,6 +7,10 @@ import CarousalImage2 from "./CarousalImage2.jpeg"
 import Homeback from "./Homeback.jpg"
 import CarousalImage3 from "./CarousalImage3.jpg"
 import CarousalImage4 from "./CarousalImage4.jpg"
+import Icon1 from "./Icon1.svg"
+import Icon2 from "./Icon2.svg"
+import Icon3 from "./Icon3.svg"
+import Icon4 from "./Icon4.svg"
 const imageUrls = [
     Homeback,
     CarousalImage4,
@@ -73,9 +77,9 @@ const HomePage = () => {
                             <Row style={{ width: "100%" }}>
                                 <Col lg={6} md={12} style={{ width: "100%" }}>
                                     <div className="HoverItem" data-aos="fade-up"
-     data-aos-duration="1000">
+                                        data-aos-duration="1000">
                                         <div>
-                                            <h4>CUTTING EDGE DESIGN</h4>
+                                            <h4><img src={Icon1} alt="" className="Icon"/> CUTTING EDGE DESIGN</h4>
                                             <FaArrowRightLong />
                                         </div>
                                         <div className="HoverContainer">
@@ -87,8 +91,8 @@ const HomePage = () => {
                                 <Col lg={6} md={12} style={{ width: "100%" }}>
 
                                     <div className="HoverItem" data-aos="fade-up"
-     data-aos-duration="1500">
-                                        <h4>PRECISION ENGINEERING</h4>
+                                        data-aos-duration="1500">
+                                        <h4><img src={Icon2} alt="" className="Icon"/> PRECISION ENGINEERING</h4>
                                         <FaArrowRightLong />
                                         <div className="HoverContainer">
                                             <p>We Deliver accuracy down to the milimeter, ensuring perfect execution every time.</p>
@@ -98,8 +102,8 @@ const HomePage = () => {
                                 </Col>
                                 <Col lg={6} md={12} style={{ width: "100%" }}>
                                     <div className="HoverItem" data-aos="fade-up"
-     data-aos-duration="2000">
-                                        <h4>SUSTAINABLE SOLUTIONS</h4>
+                                        data-aos-duration="2000">
+                                        <h4><img src={Icon4} alt="" className="Icon"/>SUSTAINABLE SOLUTIONS</h4>
                                         <FaArrowRightLong />
                                         <div className="HoverContainer">
                                             <p>Our eco-friendly designs are setting new standards in green engineering.</p>
@@ -109,8 +113,8 @@ const HomePage = () => {
                                 </Col>
                                 <Col lg={6} md={12} style={{ width: "100%" }}>
                                     <div className="HoverItem" data-aos="fade-up"
-     data-aos-duration="2500">
-                                        <h4>RAPID DELIVERY </h4>
+                                        data-aos-duration="2500">
+                                        <h4><img src={Icon3} alt="" className="Icon"/> RAPID DELIVERY </h4>
                                         <FaArrowRightLong />
                                         <div className="HoverContainer">
                                             <p>We work at the speed of innovation, without compromising on quality.</p>
