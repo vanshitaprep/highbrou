@@ -69,7 +69,7 @@ const AllProjects = () => {
                                 <Row>
                                     <Col lg={10}>
                                         <div className="ProjectsNamesCategoriesContainer">
-                                            <h3 style={{ color: "black" }}>Total Projects: {filteredProjects.length}</h3>
+                                            <h3 style={{ color: "black",marginBottom:"0px" }}>Total Projects: {filteredProjects.length}</h3>
                                             <Checkbox.Group
                                                 style={{ display: "flex", flexDirection: "column", gap: "10px" }}
                                                 onChange={handleCategoryChange}

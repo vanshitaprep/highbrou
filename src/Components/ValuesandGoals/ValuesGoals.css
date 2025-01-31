@@ -10,7 +10,7 @@
 
 .ValuesGoalsMainheading {
     position: sticky;
-    top: 130px;
+    top: 102px;
     margin-bottom: 26px;
 }
 
@@ -20,7 +20,7 @@
 
 .StickyCards>div {
     position: sticky;
-    top: 270px;
+    top: 75px;
     border-radius: 20px;
 
 }
