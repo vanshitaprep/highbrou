@@ -114,7 +114,7 @@ const AllProjects = () => {
                                 open={isModalVisible}
                                 onCancel={handleCancel}
                                 footer={null}
-                                width={1000}
+                                width={700}
                             >
 
                                 {selectedProject && (
