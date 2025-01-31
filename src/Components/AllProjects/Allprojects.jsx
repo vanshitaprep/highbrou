@@ -21,7 +21,7 @@ const AllProjects = () => {
         window.scrollTo(0, 0);
 
         const handleScroll = () => {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 900) {
                 setIsFilterVisible(window.scrollY > 300);
             }
         };
@@ -69,7 +69,7 @@ const AllProjects = () => {
                                 <Row>
                                     <Col lg={10}>
                                         <div className="ProjectsNamesCategoriesContainer">
-                                            <h3 style={{ color: "black",marginBottom:"0px" }}>Total Projects: {filteredProjects.length}</h3>
+                                            <h3 style={{ color: "black", marginBottom: "0px" }}>Total Projects: {filteredProjects.length}</h3>
                                             <Checkbox.Group
                                                 style={{ display: "flex", flexDirection: "column", gap: "10px" }}
                                                 onChange={handleCategoryChange}
@@ -180,9 +180,9 @@ const AllProjects = () => {
                             </Checkbox.Group>
 
                             {/* Apply Button */}
-                            <div style={{ marginTop: "20px", textAlign: "right",display:"flex",justifyContent:"end" }}>
+                            <div style={{ marginTop: "20px", textAlign: "right", display: "flex", justifyContent: "end" }}>
                                 <button
-                                     className="AnimatedBtnContainer"
+                                    className="AnimatedBtnContainer"
                                     onClick={() => setIsFilterModalVisible(false)}  // Close modal on click
                                 >
                                     Apply

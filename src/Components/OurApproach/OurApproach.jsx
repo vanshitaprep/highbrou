@@ -11,6 +11,9 @@ import ApproachImage6 from "./6.png"
 import ApproachImage7 from "./7.png"
 import OurApprochBackAttach from "./Our ApprochBackAttach.jpg"
 const OurApproach = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <>
             <section id="OurApprochContainer">

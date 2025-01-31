@@ -1,8 +1,11 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./Contact.css"
 import CommonTopBannerDynamic from "../CommonTopBanner/CommonTopBannerDynamic";
 import { Row, Col } from "antd";
 const Contact = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <>
             <section>

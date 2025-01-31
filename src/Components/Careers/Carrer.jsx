@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import CommonTopBannerDynamic from "../CommonTopBanner/CommonTopBannerDynamic";
 import { Row, Col, Modal, Form, Input, Button, message } from "antd";
 import { MdOutlineArrowRight } from "react-icons/md";
@@ -7,9 +7,6 @@ import { FaCalendar } from "react-icons/fa";
 const Career = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedPost, setSelectedPost] = useState(null);
-
-
-
 
     const CareerPostData = [
         {
@@ -26,6 +23,9 @@ const Career = () => {
         setIsModalOpen(false);
 
     };
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <>
             <section id="CareerContainer">
