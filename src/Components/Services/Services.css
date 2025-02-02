@@ -56,3 +56,42 @@
     transition: .5s;
     transform: translateY(0px);
 }
+
+@media (max-width:900px) {
+
+    .HoverAnimationContentContainer .HoverableCardContent h2 {
+        padding: 0px 30px;
+        background-color: white;
+        margin-bottom: 0px;
+        color: black;
+
+        transition: .5s;
+        padding-top: 30px;
+        transform: translateY(0px);
+        padding-bottom: 30px;
+    }
+
+    .HoverAnimationContentContainer .HoverableCardContent:hover h2 {
+        background-color: white;
+        color: black;
+        transition: .5s;
+        transform: translateY(0px);
+        padding-bottom: 0px;
+    }
+
+    .HoverAnimationContentContainer .HoverableCardContent>div {
+        background-color: white;
+        /* height: 100px; */
+        max-height: 100% !important;
+        transition: .5s;
+        padding: 30px;
+        transform: translateY(0px);
+    }
+
+    .HoverAnimationContentContainer .HoverableCardContent:hover>div {
+        background-color: white;
+        max-height: 100% !important;
+        transition: .5s;
+        transform: translateY(0px);
+    }
+}

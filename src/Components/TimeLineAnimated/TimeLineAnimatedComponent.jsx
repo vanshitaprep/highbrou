@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "antd";
 import "./TimeLineAnimatedComponent.css"
 import { IoIosArrowRoundDown } from "react-icons/io";
-import HighbroTimeLinePc from "./HighbroTimeLinePc.png"
+// import HighbroTimeLinePc from "./HighbroTimeLinePc.png"
 import higbroTimeLine from "./TimelineMainImage.png"
 import image1 from "./01.png"
 import image2 from "./02.png"

@@ -11,8 +11,11 @@ const Career = () => {
     const CareerPostData = [
         {
             postTitle: "Jr. Civil Engineer",
-            postDate: "13 November, 2024"
-        }
+            postDate: "13 November, 2024",
+            jobdescription:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fuga culpa veniam soluta consequuntur, praesentium impedit delectus nam mollitia possimus, labore voluptate! Itaque asperiores perferendis omnis magnam inventore, alias nesciunt. Esse illum nobis non quisquam qui. Recusandae facilis odio quia."
+        },
+       
+
     ]
     const openModal = (post) => {
         setSelectedPost(post);
@@ -28,6 +31,7 @@ const Career = () => {
     }, []);
     return (
         <>
+  
             <section id="CareerContainer">
                 <CommonTopBannerDynamic
                     heading="Our Career"
@@ -37,12 +41,13 @@ const Career = () => {
                 <div className="CareerPostContainer sectionPadding">
                     <Row>
                         {CareerPostData.map((item, index) => (
-                            <Col lg={6} md={12} key={index} style={{ width: "100%" }}>
+                            <Col lg={12} md={12} key={index} style={{ width: "100%",padding:"10px" }}>
                                 <div className="BorderHoverCard">
 
                                     <div className="HoverableCardContent">
                                         <span><FaCalendar /> &nbsp;{item.postDate}</span>
                                         <h2>{item.postTitle}</h2>
+                                        <p>{item.jobdescription}</p>
                                         <br />
                                         <button className="AnimatedBtnContainer" onClick={() => openModal(item)}>Apply Now<MdOutlineArrowRight /></button>
                                     </div>

@@ -275,6 +275,13 @@
 }
 
 @media (max-width:900px) {
+    .InverstorsTeamContainerContent {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        /* width: 100%; */
+        padding: 20px 30px;
+    }
     .OurTeamFoundersContentHeader span {
         display: flex;
         align-items: start;

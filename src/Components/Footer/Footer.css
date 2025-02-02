@@ -148,5 +148,16 @@
     #FooterContainer .NavigationLinksContainer p {
         width: 100% !important;
     }
+    #FooterContainer .LogoPlacingContainer img {
+        width: 300px;
+    }
+
+    
+}
+
+@media (max-width:769px){
+    #FooterContainer .LogoPlacingContainer img {
+        width: 100%;
+    }
 
 }

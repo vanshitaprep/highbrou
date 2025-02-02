@@ -112,11 +112,12 @@
     }
 
     .WhatWeDoHoverableCards .ant-row .ant-col {
-        padding-right: 0px;
+        padding-right: 20px;
+        margin-bottom: 10px;
     }
 
     .HoverableCardImage {
-        height: 100%;
+        height: 300px;
         overflow: hidden;
         border-radius: 10px;
     }
@@ -125,5 +126,19 @@
         margin-bottom: 20px;
     }
 
+
+}
+
+@media (max-width:769px) {
+    .HoverableCardImage {
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .WhatWeDoHoverableCards .ant-row .ant-col {
+        padding-right: 0px;
+        width: 100%;
+    }
 
 }
