@@ -16,7 +16,7 @@ const Contact = () => {
                     image={Contactback}
                 />
                 <div>
-                    <div className="sectionPadding"> 
+                    <div className="sectionPadding">
                         <div className="ContactMapContainers">
                             <Row>
                                 <Col lg={12} md={24}>

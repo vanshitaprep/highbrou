@@ -1,8 +1,9 @@
 import ValueEngineering from "./ValueEngineering.jpg"
 import PeerReview from "./PeerReview.jpg"
+import StructuralEnginn from "./StructuralEnginn.jpg"
 const WhatWeDoCardsData = [
     {
-        img: "https://images.pexels.com/photos/258160/pexels-photo-258160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        img: StructuralEnginn,
         title: "STRUCTURAL ENGINEERING DESIGN",
         tagline: "We covers the full spectrum, including:",
         descriptionDetails: <>

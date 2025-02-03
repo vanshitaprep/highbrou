@@ -12,16 +12,16 @@ const WhatWeDoHome = () => {
                 <div className="WhatWeDoCardsContainer">
                     <div className="HeaderContainerWhatWeDo">
                         <span data-aos="fade-up"
-     data-aos-duration="1000">WHAT WE DO?</span>
+                            data-aos-duration="1000">WHAT WE DO?</span>
                         <h2 data-aos="fade-up"
-     data-aos-duration="1500">Transforming Ideas Into Structural Excellence</h2>
+                            data-aos-duration="1500">Transforming Ideas Into Structural Excellence</h2>
                     </div>
                     <div className="WhatWeDoHoverableCards">
                         <div>
                             <Row>
                                 {WhatWeDoCardsData.map((item, index) => (
-                                    <Col key={index} lg={8} md={12}   data-aos="fade-up"
-                                    data-aos-delay={`${index * 200}`} data-aos-duration="1000">
+                                    <Col key={index} lg={8} md={12} data-aos="fade-up"
+                                        data-aos-delay={`${index * 200}`} data-aos-duration="1000">
                                         <Link to="/services">
                                             <div className="BorderHoverCard">
                                                 <div className="HoverableCardImage">
