@@ -1,6 +1,7 @@
 import ValueEngineering from "./ValueEngineering.jpg"
 import PeerReview from "./PeerReview.jpg"
 import StructuralEnginn from "./StructuralEnginn.jpg"
+import ValueEngineering2 from "./ValueEngineering2.jpeg"
 const WhatWeDoCardsData = [
     {
         img: StructuralEnginn,
@@ -36,7 +37,7 @@ const WhatWeDoCardsData = [
         </>
     },
     {
-        img: ValueEngineering,
+        img: ValueEngineering2,
         title: "VALUE ENGINEERING",
         tagline: "Our Value Engineering service employs:",
         descriptionDetails: <>

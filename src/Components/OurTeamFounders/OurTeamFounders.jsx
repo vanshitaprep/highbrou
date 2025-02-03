@@ -19,7 +19,7 @@ const OurTeamFounders = () => {
     const FoundersData = [
         {
             memberName: "SAYYAD WAJED ALI",
-            position: "FOUNDER",
+            position: "Director",
             tagline: "Structural Engineer with 10+ years of expertise in high-rises and infrastructure.",
             image: "/Images/team1.webp",
             qualificationDetails: (
@@ -34,7 +34,8 @@ const OurTeamFounders = () => {
         },
         {
             memberName: "SARFARAZ SHAIKH",
-            position: "FOUNDER",
+            position: "Associate Director",
+            tagline: "Experienced MEP consultant with 20+ years in the industry, successfully delivering 200+ projects across sectors.",
             image: "/Images/team2.webp",
             qualificationDetails: (
                 <div>
@@ -126,8 +127,8 @@ const OurTeamFounders = () => {
                             </Row> */}
                             <Row>
                                 {FoundersData.map((item, index) => (
-                                    <Col lg={12} md={24} key={index} style={{ width: "100%" }}   data-aos="fade-up"
-                                    data-aos-delay={`${index * 200}`}>
+                                    <Col lg={12} md={24} key={index} style={{ width: "100%" }} data-aos="fade-up"
+                                        data-aos-delay={`${index * 200}`}>
                                         <div
 
                                             onClick={() => showModal(item)} // Open modal on click
@@ -140,7 +141,7 @@ const OurTeamFounders = () => {
                                             </div>
                                             <div className="FounderInfo">
                                                 <div>
-                                                    <span>{item.position}</span>
+                                                    <span style={{ textTransform: "uppercase" }}>{item.position}</span>
                                                     <h2>{item.memberName}</h2>
                                                     <p>{item.tagline}</p>
                                                 </div>
@@ -162,7 +163,7 @@ const OurTeamFounders = () => {
                                     <Col lg={10}>
                                         <div className="InverstorsTeamContainerContent">
                                             <div>
-                                                <h2>Our Investors Team</h2>
+                                                <h2>Board of Directors</h2>
                                                 <p>We’re on the lookout for passionate, forward-thinking individuals who are eager to make an impact.</p>
                                             </div>
                                         </div>
@@ -177,9 +178,6 @@ const OurTeamFounders = () => {
                                                     delay: 2500,
                                                     disableOnInteraction: false,
                                                 }}
-                                                // pagination={{
-                                                //     clickable: true,
-                                                // }}
                                                 modules={[Autoplay, Pagination]}
                                                 className="mySwiper"
                                                 style={{ height: "100%" }}

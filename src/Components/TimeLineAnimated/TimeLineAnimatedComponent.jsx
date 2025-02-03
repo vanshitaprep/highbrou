@@ -3,14 +3,14 @@ import { Row, Col } from "antd";
 import "./TimeLineAnimatedComponent.css"
 import { IoIosArrowRoundDown } from "react-icons/io";
 // import HighbroTimeLinePc from "./HighbroTimeLinePc.png"
-import higbroTimeLine from "./TimelineMainImage.png"
-import image1 from "./01.png"
-import image2 from "./02.png"
-import image3 from "./03.png"
-import image4 from "./04.png"
-import image5 from "./05.png"
-import image6 from "./06.png"
-import image7 from "./07.png"
+import higbroTimeLine from "./UpdatedTimeline.png"
+import image1 from "./1.svg"
+import image2 from "./2.svg"
+import image3 from "./3.svg"
+import image4 from "./4.svg"
+import image5 from "./5.svg"
+import image6 from "./6.svg"
+import image7 from "./7.svg"
 const TimeLineAnimatedComponent = () => {
 
     const TimeLineContentData = [
@@ -51,7 +51,7 @@ const TimeLineAnimatedComponent = () => {
 
                 <div className="sectionPadding">
                     <h2 className="TimelineSectionHeading" data-aos="fade-up"
-     data-aos-duration="1000">Our Journey Through Time</h2>
+                        data-aos-duration="1000">Our Journey Through Time</h2>
                     {/* <div className="AbsoluteContainer">
                         <img src={HighbroTimeLinePc} alt="" className="TimelineImageonPc" />
                         <div>
@@ -99,8 +99,6 @@ const TimeLineAnimatedComponent = () => {
                     <img src={image6} alt="" data-aos="fade-up" data-aos-duration="1000" />
                     <img src={image7} alt="" data-aos="fade-up" data-aos-duration="1000" />
                 </div>
-
-
                 {/* <Row>
                         {TimeLineContentData.map((item, index) => (
                             <Col lg={24} key={index} style={{ width: "100%" }}>
@@ -115,7 +113,6 @@ const TimeLineAnimatedComponent = () => {
                             </Col>
                         ))}
                     </Row> */}
-
             </section>
         </>
     )
