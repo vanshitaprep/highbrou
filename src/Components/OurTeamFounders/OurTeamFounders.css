@@ -275,12 +275,33 @@
 }
 
 @media (max-width:900px) {
+    .FounderInfo {
+        width: 97%;
+        padding: 10px 10px;
+        color: black;
+    }
+    
+    .FounderImageContainer {
+        width: 100%;
+        padding: 0px;
+        overflow: hidden;
+    }
+    
+    #FounderCardMainContainer {
+        display: flex;
+        gap: 20px;
+        background-color: rgb(245, 245, 245);
+        border-radius: 10px;
+        /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+        overflow: hidden;
+        flex-direction: column;
+    }
     .InverstorsTeamContainerContent {
         display: flex;
         align-items: center;
         height: 100%;
         /* width: 100%; */
-        padding: 20px 30px;
+        padding: 20px 10px;
     }
     .OurTeamFoundersContentHeader span {
         display: flex;

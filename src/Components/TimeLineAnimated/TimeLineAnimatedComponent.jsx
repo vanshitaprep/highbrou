@@ -11,6 +11,7 @@ import image4 from "./4.svg"
 import image5 from "./5.svg"
 import image6 from "./6.svg"
 import image7 from "./7.svg"
+import MobileTimeline from "./MobileTimeline.png"
 const TimeLineAnimatedComponent = () => {
 
     const TimeLineContentData = [
@@ -89,8 +90,9 @@ const TimeLineAnimatedComponent = () => {
                         </div>
                     </div> */}
                 </div>
-                {/* <img src={higbroTimeLine} alt="" style={{width:"100%"}}/> */}
-                <div className="TimelineImages">
+                {/* <img src={MobileTimeline} alt="" style={{width:"100%"}}/> */}
+               <div className="OnlyPCCode">
+               <div className="TimelineImages" >
                     <img src={image1} alt="" data-aos="fade-up" data-aos-duration="1000" />
                     <img src={image2} alt="" data-aos="fade-up" data-aos-duration="1000" />
                     <img src={image3} alt="" data-aos="fade-up" data-aos-duration="1000" />
@@ -99,6 +101,8 @@ const TimeLineAnimatedComponent = () => {
                     <img src={image6} alt="" data-aos="fade-up" data-aos-duration="1000" />
                     <img src={image7} alt="" data-aos="fade-up" data-aos-duration="1000" />
                 </div>
+               </div>
+                <img src={MobileTimeline} alt="" style={{width:"100%"}} className="OnlyMobile"/>
                 {/* <Row>
                         {TimeLineContentData.map((item, index) => (
                             <Col lg={24} key={index} style={{ width: "100%" }}>

@@ -181,6 +181,10 @@ const OurTeamFounders = () => {
                                                 modules={[Autoplay, Pagination]}
                                                 className="mySwiper"
                                                 style={{ height: "100%" }}
+                                                breakpoints={{
+                                                    0: { slidesPerView: 1, spaceBetween: 10 }, // For mobile devices
+                                                    768: { slidesPerView: 2, spaceBetween: 30 }, // For tablets and larger screens
+                                                }}
                                             >
                                                 {InverstorsDetails.map((item, index) => (
                                                     <SwiperSlide key={index}>

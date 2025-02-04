@@ -158,9 +158,22 @@
     right: 60px;
     top: 0px;
 } */
-
+.OnlyPCCode{
+    display: block;
+}
+.OnlyMobile{
+    display: none;
+}
 
 @media (max-width:900px) {
+    .OnlyMobile{
+        display: block;
+        margin-top: -4rem;
+    }
+    
+    .OnlyPCCode{
+        display: none;
+    }
     .TimelineSectionHeading {
         color: rgb(13, 42, 59);
         letter-spacing: -1.4px;

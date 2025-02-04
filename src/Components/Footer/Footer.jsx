@@ -66,8 +66,8 @@ const Footer = () => {
                         <div className="CopywriteText">
                             <p>@2025 <Link to="https://www.outleadsolutions.com/" target="_blank"><b>OutLead Solutions</b></Link>. All rights reserved.</p>
                             <div style={{display:"flex",gap:"10px"}}>
-                                <FaLinkedin />
-                                <FaInstagramSquare />
+                                {/* <FaLinkedin style={{color:"white"}}/> */}
+                               <Link to="https://www.linkedin.com/company/highbrou/" target="_blank"><FaInstagramSquare style={{color:"white"}}/></Link> 
                             </div>
                         </div>
                     </div>

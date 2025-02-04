@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import OurApprochtimelineImage from "./OurApprochTimeline.png"
 import "./OurApproch.css"
 import CommonTopBannerDynamic from "../CommonTopBanner/CommonTopBannerDynamic";
@@ -11,6 +11,7 @@ import ApproachImage6 from "./6.png"
 import ApproachImage7 from "./7.png"
 import OurApprochBackAttach from "./Our ApprochBackAttach.jpg"
 import OurApprochTopBack from "./OurApprochTopBack.jpg"
+import OurApprochMobile from "./OurApprochMobile.png"
 const OurApproach = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -28,16 +29,19 @@ const OurApproach = () => {
                     <div className="sectionPadding">
                         <h2>Our Approach</h2>
                     </div>
-                    <div className="ourApprochImageContainer">
-                        <img src={ApproachImage1} alt="" data-aos="fade-up" data-aos-duration="1000" />
-                        <img src={ApproachImage2} alt="" data-aos="fade-up" data-aos-duration="1000" />
-                        <img src={ApproachImage3} alt="" data-aos="fade-up" data-aos-duration="1000" />
-                        <img src={ApproachImage4} alt="" data-aos="fade-up" data-aos-duration="1000" />
-                        <img src={ApproachImage5} alt="" data-aos="fade-up" data-aos-duration="1000" />
-                        <img src={ApproachImage6} alt="" data-aos="fade-up" data-aos-duration="1000" />
-                        <img src={ApproachImage7} alt="" data-aos="fade-up" data-aos-duration="1000" />
+                    <div className="OnlyPCCode">
+                        <div className="ourApprochImageContainer">
+                            <img src={ApproachImage1} alt="" data-aos="fade-up" data-aos-duration="1000" />
+                            <img src={ApproachImage2} alt="" data-aos="fade-up" data-aos-duration="1000" />
+                            <img src={ApproachImage3} alt="" data-aos="fade-up" data-aos-duration="1000" />
+                            <img src={ApproachImage4} alt="" data-aos="fade-up" data-aos-duration="1000" />
+                            <img src={ApproachImage5} alt="" data-aos="fade-up" data-aos-duration="1000" />
+                            <img src={ApproachImage6} alt="" data-aos="fade-up" data-aos-duration="1000" />
+                            <img src={ApproachImage7} alt="" data-aos="fade-up" data-aos-duration="1000" />
 
+                        </div>
                     </div>
+                    <img src={OurApprochMobile} alt="" className="OnlyMobile" style={{width:"100%"}}/>
                 </div>
             </section>
         </>
