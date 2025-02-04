@@ -20,7 +20,7 @@ const OurApproach = () => {
             <section id="OurApprochContainer">
                 <CommonTopBannerDynamic
                     heading="Our Approach"
-                    subheading="High Standards, Innovative Solutions"
+                    subheading="Excellence & Innovation"
                     image={OurApprochTopBack}
                 />
                 <div className="OurApprochContentContainer">

@@ -12,7 +12,7 @@ const Contact = () => {
             <section>
                 <CommonTopBannerDynamic
                     heading="Contact"
-                    subheading="Connect Us"
+                    subheading="Reach Out"
                     image={Contactback}
                 />
                 <div>
