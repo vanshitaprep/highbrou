@@ -68,7 +68,7 @@ const AllProjects = () => {
                         <div className="AnimatedScrollingCards">
                             <div>
                                 <Row>
-                                    <Col lg={10}>
+                                    <Col lg={12}>
                                         <div className="ProjectsNamesCategoriesContainer">
                                             <h3 style={{ color: "black", marginBottom: "0px" }}>Total Projects: {filteredProjects.length}</h3>
                                             <Checkbox.Group
@@ -88,7 +88,7 @@ const AllProjects = () => {
 
                                         </div>
                                     </Col>
-                                    <Col lg={14} style={{ width: "100%" }}>
+                                    <Col lg={12} style={{ width: "100%" }}>
                                         {filteredProjects.map((item, index) => (
                                             <div
                                                 className="ProjectsCardsContainer"

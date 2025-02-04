@@ -56,3 +56,10 @@ p {
   }
 
 }
+
+@media(min-width:900px) and (max-width:1100px) {
+  .sectionPadding {
+    padding: 80px 10px;
+  }
+
+}

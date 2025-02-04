@@ -10,22 +10,22 @@ const Expertise = () => {
     const ExpertiseData = [
         {
             title: "CUTTING-EDGE DESIGN",
-            image:CUTTINGEDGEDESIGN,
+            image: CUTTINGEDGEDESIGN,
             tagline: "Our state-of-the-art technology creates structures that others only dream of."
         },
         {
             title: "PRECISION ENGINEERING",
-            image:PRECISIONENGINEERING,
+            image: PRECISIONENGINEERING,
             tagline: "We deliver accuracy down to the millimeter, ensuring perfect execution every time."
         },
         {
             title: "SUSTAINABLE SOLUTIONS",
-            image:SUSTAINABLESOLUTIONS,
+            image: SUSTAINABLESOLUTIONS,
             tagline: "Our eco-friendly designs are setting new standards in green engineering."
         },
         {
             title: "RAPID DELIVERY",
-            image:RAPIDDELIVERY,
+            image: RAPIDDELIVERY,
             tagline: "We work at the speed of innovate/ion, without compromising on quality."
         }
     ]
@@ -33,7 +33,7 @@ const Expertise = () => {
         <>
             <section id="ExpertiseContainer">
                 <div className="sectionPadding">
-                <div className="HeaderContainerWhatWeDo">
+                    <div className="HeaderContainerWhatWeDo">
                         <span>UNPARALLELED EXPERTISE</span>
                         <h2>PIONEERING EXCELLENCE</h2>
                     </div>
@@ -45,7 +45,7 @@ const Expertise = () => {
                                         <img src={item.image} alt="" />
                                     </div>
                                     <div className="HoverableCardContent">
-                                    <h2>{item.title}</h2>
+                                        <h2>{item.title}</h2>
                                         <span>{item.tagline}</span>
                                     </div>
                                     <hr />
