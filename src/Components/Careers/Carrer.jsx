@@ -224,159 +224,159 @@ const Career = () => {
                     width={800}
                 >
                     <Form layout="vertical" initialValues={{}}>
-    <Form.Item
-        name="firstName"
-        label="First Name"
-        rules={[
-            { required: true, message: "Please enter your first name!" },
-            { pattern: /^[A-Za-z\s]+$/, message: "First name should only contain letters!" }
-        ]}
-    >
-        <Input placeholder="Enter your first name" />
-    </Form.Item>
+                        <Form.Item
+                            name="firstName"
+                            label="First Name"
+                            rules={[
+                                { required: true, message: "Please enter your first name!" },
+                                { pattern: /^[A-Za-z\s]+$/, message: "First name should only contain letters!" }
+                            ]}
+                        >
+                            <Input placeholder="Enter your first name" />
+                        </Form.Item>
 
-    <Form.Item
-        name="lastName"
-        label="Last Name"
-        rules={[
-            { required: true, message: "Please enter your last name!" },
-            { pattern: /^[A-Za-z\s]+$/, message: "Last name should only contain letters!" }
-        ]}
-    >
-        <Input placeholder="Enter your last name" />
-    </Form.Item>
+                        <Form.Item
+                            name="lastName"
+                            label="Last Name"
+                            rules={[
+                                { required: true, message: "Please enter your last name!" },
+                                { pattern: /^[A-Za-z\s]+$/, message: "Last name should only contain letters!" }
+                            ]}
+                        >
+                            <Input placeholder="Enter your last name" />
+                        </Form.Item>
 
-    <Form.Item
-        name="mobile"
-        label="Mobile Number"
-        rules={[
-            { required: true, message: "Please enter your mobile number!" },
-            { pattern: /^[0-9]{10}$/, message: "Enter a valid 10-digit mobile number!" }
-        ]}
-    >
-        <Input placeholder="Enter your mobile number" maxLength={10} />
-    </Form.Item>
+                        <Form.Item
+                            name="mobile"
+                            label="Mobile Number"
+                            rules={[
+                                { required: true, message: "Please enter your mobile number!" },
+                                { pattern: /^[0-9]{10}$/, message: "Enter a valid 10-digit mobile number!" }
+                            ]}
+                        >
+                            <Input placeholder="Enter your mobile number" maxLength={10} />
+                        </Form.Item>
 
-    <Form.Item
-        name="email"
-        label="Email"
-        rules={[
-            { required: true, message: "Please enter your email!" },
-            { type: "email", message: "Enter a valid email address!" }
-        ]}
-    >
-        <Input placeholder="Enter your email address" />
-    </Form.Item>
+                        <Form.Item
+                            name="email"
+                            label="Email"
+                            rules={[
+                                { required: true, message: "Please enter your email!" },
+                                { type: "email", message: "Enter a valid email address!" }
+                            ]}
+                        >
+                            <Input placeholder="Enter your email address" />
+                        </Form.Item>
 
-    <Form.Item
-        name="qualification"
-        label="Highest Qualification"
-        rules={[
-            { required: true, message: "Please enter your qualification!" },
-            { pattern: /^[A-Za-z\s]+$/, message: "Qualification should only contain letters!" }
-        ]}
-    >
-        <Input placeholder="Enter your highest qualification" />
-    </Form.Item>
+                        <Form.Item
+                            name="qualification"
+                            label="Highest Qualification"
+                            rules={[
+                                { required: true, message: "Please enter your qualification!" },
+                                { pattern: /^[A-Za-z\s]+$/, message: "Qualification should only contain letters!" }
+                            ]}
+                        >
+                            <Input placeholder="Enter your highest qualification" />
+                        </Form.Item>
 
-    <Form.Item
-        name="passingYear"
-        label="Passing Year"
-        rules={[
-            { required: true, message: "Please enter your passing year!" },
-            { pattern: /^[0-9]{4}$/, message: "Enter a valid 4-digit year!" }
-        ]}
-    >
-        <Input placeholder="Enter your passing year" maxLength={4} />
-    </Form.Item>
+                        <Form.Item
+                            name="passingYear"
+                            label="Passing Year"
+                            rules={[
+                                { required: true, message: "Please enter your passing year!" },
+                                { pattern: /^[0-9]{4}$/, message: "Enter a valid 4-digit year!" }
+                            ]}
+                        >
+                            <Input placeholder="Enter your passing year" maxLength={4} />
+                        </Form.Item>
 
-    <Form.Item
-        name="currentCTC"
-        label="Current CTC (in INR)"
-        rules={[
-            { required: true, message: "Please enter your current CTC!" },
-            { pattern: /^[0-9]+$/, message: "CTC should only contain numbers!" }
-        ]}
-    >
-        <Input placeholder="Enter your current CTC" />
-    </Form.Item>
+                        <Form.Item
+                            name="currentCTC"
+                            label="Current CTC (in INR)"
+                            rules={[
+                                { required: true, message: "Please enter your current CTC!" },
+                                { pattern: /^[0-9]+$/, message: "CTC should only contain numbers!" }
+                            ]}
+                        >
+                            <Input placeholder="Enter your current CTC" />
+                        </Form.Item>
 
-    <Form.Item
-        name="expectedCTC"
-        label="Expected CTC (in INR)"
-        rules={[
-            { required: true, message: "Please enter your expected CTC!" },
-            { pattern: /^[0-9]+$/, message: "CTC should only contain numbers!" }
-        ]}
-    >
-        <Input placeholder="Enter your expected CTC" />
-    </Form.Item>
+                        <Form.Item
+                            name="expectedCTC"
+                            label="Expected CTC (in INR)"
+                            rules={[
+                                { required: true, message: "Please enter your expected CTC!" },
+                                { pattern: /^[0-9]+$/, message: "CTC should only contain numbers!" }
+                            ]}
+                        >
+                            <Input placeholder="Enter your expected CTC" />
+                        </Form.Item>
 
-    <Form.Item
-        name="permanentAddress"
-        label="Permanent Address"
-        rules={[{ required: true, message: "Please enter your permanent address!" }]}
-    >
-        <Input.TextArea placeholder="Enter your permanent address" rows={3} />
-    </Form.Item>
+                        <Form.Item
+                            name="permanentAddress"
+                            label="Permanent Address"
+                            rules={[{ required: true, message: "Please enter your permanent address!" }]}
+                        >
+                            <Input.TextArea placeholder="Enter your permanent address" rows={3} />
+                        </Form.Item>
 
-    <Form.Item
-        name="currentAddress"
-        label="Current Address"
-        rules={[{ required: true, message: "Please enter your current address!" }]}
-    >
-        <Input.TextArea placeholder="Enter your current address" rows={3} />
-    </Form.Item>
+                        <Form.Item
+                            name="currentAddress"
+                            label="Current Address"
+                            rules={[{ required: true, message: "Please enter your current address!" }]}
+                        >
+                            <Input.TextArea placeholder="Enter your current address" rows={3} />
+                        </Form.Item>
 
-    <Form.Item
-        name="experience"
-        label="Total Years of Experience in Relevant Job Profile"
-        rules={[
-            { required: true, message: "Please enter your experience!" },
-            { pattern: /^[0-9]+$/, message: "Experience should only contain numbers!" }
-        ]}
-    >
-        <Input placeholder="Enter your total years of experience" />
-    </Form.Item>
+                        <Form.Item
+                            name="experience"
+                            label="Total Years of Experience in Relevant Job Profile"
+                            rules={[
+                                { required: true, message: "Please enter your experience!" },
+                                { pattern: /^[0-9]+$/, message: "Experience should only contain numbers!" }
+                            ]}
+                        >
+                            <Input placeholder="Enter your total years of experience" />
+                        </Form.Item>
 
-    <Form.Item
-        name="noticePeriod"
-        label="Notice Period with Current Employer"
-        rules={[
-            { required: true, message: "Please enter your notice period!" },
-            { pattern: /^[0-9]+$/, message: "Notice period should only contain numbers!" }
-        ]}
-    >
-        <Input placeholder="Enter your notice period" />
-    </Form.Item>
+                        <Form.Item
+                            name="noticePeriod"
+                            label="Notice Period with Current Employer"
+                            rules={[
+                                { required: true, message: "Please enter your notice period!" },
+                                { pattern: /^[0-9]+$/, message: "Notice period should only contain numbers!" }
+                            ]}
+                        >
+                            <Input placeholder="Enter your notice period" />
+                        </Form.Item>
 
-    <Form.Item
-        name="resume"
-        label="Resume (PDF or DOCX only, Max 1MB)"
-        rules={[
-            { required: true, message: "Please upload your resume!" },
-            {
-                validator(_, value) {
-                    if (
-                        !value ||
-                        (value.file &&
-                            ["application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"].includes(value.file.type) &&
-                            value.file.size <= 1 * 1024 * 1024)
-                    ) {
-                        return Promise.resolve();
-                    }
-                    return Promise.reject(new Error("Only PDF or DOCX files under 1MB are allowed!"));
-                },
-            },
-        ]}
-    >
-        <Input type="file" accept=".pdf,.docx" />
-    </Form.Item>
+                        <Form.Item
+                            name="resume"
+                            label="Resume (PDF or DOCX only, Max 1MB)"
+                            rules={[
+                                { required: true, message: "Please upload your resume!" },
+                                {
+                                    validator(_, value) {
+                                        if (
+                                            !value ||
+                                            (value.file &&
+                                                ["application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"].includes(value.file.type) &&
+                                                value.file.size <= 1 * 1024 * 1024)
+                                        ) {
+                                            return Promise.resolve();
+                                        }
+                                        return Promise.reject(new Error("Only PDF or DOCX files under 1MB are allowed!"));
+                                    },
+                                },
+                            ]}
+                        >
+                            <Input type="file" accept=".pdf,.docx" />
+                        </Form.Item>
 
-    <button className="AnimatedBtnContainer" htmlType="submit">
-        Submit Application
-    </button>
-</Form>
+                        <button className="AnimatedBtnContainer" htmlType="submit">
+                            Submit Application
+                        </button>
+                    </Form>
 
                 </Modal>
             </section>

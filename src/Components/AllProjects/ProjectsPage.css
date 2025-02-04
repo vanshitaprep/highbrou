@@ -86,7 +86,7 @@
 }
 
 .ProjectsCardsContainer .HoverContainerContainer h2 {
-    transform: translateY(50px);
+    transform: translateY(0px);
     transition: .5s;
     font-weight: 600;
 }
