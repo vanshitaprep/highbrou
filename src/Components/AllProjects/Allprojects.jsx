@@ -6,6 +6,7 @@ import ProjectsData from "./ProjectsData";
 import NavigationLinks from "../HighbrouNavigation/NavigationLinks";
 import AllProjectsTopComBanner from "./AllProjectsTopComBanner.jpg";
 import { CiFilter } from "react-icons/ci";
+import ProjectsTopBanner from "./ProjectsTopBanner.jpg"
 
 const AllProjects = () => {
     const projectCategory = NavigationLinks.find(link => link.link === "Projects +");
@@ -58,7 +59,7 @@ const AllProjects = () => {
                 <CommonTopBannerDynamic
                     heading="Our Projects"
                     subheading="Our Works, Our Standards"
-                    image={AllProjectsTopComBanner}
+                    image={ProjectsTopBanner}
                 />
                 <div>
                     <div className="sectionPadding" style={{ position: "relative" }}>
