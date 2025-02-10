@@ -3,9 +3,11 @@ import PeerReview from "./PeerReview.jpg"
 import StructuralEnginn from "./StructuralEnginn.jpg"
 import ValueEngineering2 from "./ValueEngineering2.jpeg"
 import ValueEnginne3 from "./ValueEnginne3.jpg"
+import StructuralImage from "./StructuralImage.png"
+import ValueEnginn2 from "./ValueEnginn2.jpg"
 const WhatWeDoCardsData = [
     {
-        img: StructuralEnginn,
+        img: StructuralImage,
         title: "STRUCTURAL ENGINEERING DESIGN",
         tagline: "We covers the full spectrum, including:",
         descriptionDetails: <>
@@ -23,7 +25,7 @@ const WhatWeDoCardsData = [
         </>
     },
     {
-        img: PeerReview,
+        img: ValueEnginne3,
         title: "PEER REVIEW",
         tagline: "Our Peer Review Service ensures :",
         descriptionDetails: <>
@@ -38,7 +40,7 @@ const WhatWeDoCardsData = [
         </>
     },
     {
-        img: ValueEnginne3,
+        img: ValueEnginn2,
         title: "VALUE ENGINEERING",
         tagline: "Our Value Engineering service employs:",
         descriptionDetails: <>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CommonTopBannerDynamic from "../CommonTopBanner/CommonTopBannerDynamic";
-import { Row, Col, Modal, Form, Input, Button, message, Tag } from "antd";
+import { Row, Col, Modal, Form, Input, Button, message, Tag, Upload, notification } from "antd";
 import { MdOutlineArrowRight } from "react-icons/md";
 import { FaCalendar } from "react-icons/fa";
 import "./Careers.css"
@@ -8,6 +8,134 @@ const Career = () => {
     const [isDescriptionModalOpen, setIsDescriptionModalOpen] = useState(false);
     const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
     const [selectedPost, setSelectedPost] = useState(null);
+    const [form] = Form.useForm();
+    const [resumeLink, setResumeLink] = useState(null);
+
+    const handleResumeChange = async (info) => {
+        if (!info.file) return;
+
+        try {
+            const file = info.file;
+            const fileType = file.type;
+
+            // Request upload policy from the backend
+            const response = await fetch("http://localhost:4040/api/chats/uploadPolicy", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    authorization: `Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MWJkNGM4YWQ3NzczMjc5YzVhZTM4MCIsInJvbGUiOiJtb2RlcmF0b3IiLCJleHAiOjE3MzAwMjc4MzksInBocyI6e30sImlhdCI6MTcyNDg0MzgzOH0.gNjc_Z5LD9vqtZ7V15CQhXsAdXrhbW9OEwOMEDz7MMg`,
+
+                },
+                body: JSON.stringify({
+                    fileName: encodeURIComponent(file.name),
+                    mime: fileType,
+                    acl: "public-read",
+                }),
+            });
+
+            const data = await response.json();
+
+            if (data?.data?.fields && data?.data?.url) {
+                // Prepare form data
+                const formData = new FormData();
+                Object.entries(data.data.fields).forEach(([key, value]) => formData.append(key, value));
+                formData.append("file", file);
+
+                // Upload file to the S3 bucket
+                const uploadResponse = await fetch(data.data.url, {
+                    method: "POST",
+                    body: formData,
+                });
+
+
+
+                if (uploadResponse.ok) {
+                    const finalUrl = `${data.data.url}/${encodeURIComponent(data.filePath)}`;
+                    setResumeLink(finalUrl);
+                    console.log("Resume uploaded successfully:", finalUrl);
+                    notification.success({
+                        message: "Upload Successful",
+                        description: "Your resume has been uploaded successfully.",
+                    });
+                } else {
+                    notification.error({ message: "Resume upload failed" });
+                    notification.error({
+                        message: "Upload Failed",
+                        description: "Error while uploading Resume. Please try again.",
+                    });
+                }
+            } else {
+                notification.error({ message: "Failed to get upload URL" });
+            }
+        } catch (error) {
+            console.error("Upload error:", error);
+            notification.error({ message: "Error while uploading resume" });
+        }
+    };
+
+    const handleResumeRemove = () => {
+        setResumeLink(null); // Clear resume link when file is removed
+    };
+
+    const handleSubmit = async (values) => {
+        if (!resumeLink) {
+            message.error("Please upload your resume.");
+            return;
+        }
+
+        // Convert resumeLink to filename if needed
+        // const resumeFileName = resumeLink.split("/").pop(); // Extracts "resume.pdf"
+
+        // Construct JSON payload
+        const payload = {
+            firstName: values.firstName,
+            lastName: values.lastName,
+            mobile: values.mobile,
+            email: values.email,
+            highestQualification: values.qualification,
+            passingYear: Number(values.passingYear),
+            currentCTC: Number(values.currentCTC),
+            expectedCTC: Number(values.expectedCTC),
+            permanentAddress: values.permanentAddress,
+            currentAddress: values.currentAddress,
+            experience: Number(values.experience),
+            noticePeriod: values.noticePeriod,
+            resume: resumeLink,
+        };
+
+        try {
+            const response = await fetch("http://localhost:4040/api/highbrou/addJobApplication", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload),
+            });
+
+            const data = await response.json();
+            console.log("🛠 API Response:", data);
+            if (response.ok) {
+                message.success(data.message);
+                form.resetFields();
+                setResumeLink(""); // Reset resume link
+                handleCancel(); // Close modal
+                notification.success({
+                    message: "Application Submitted",
+                    description: "Your job application has been successfully submitted.",
+                });
+            } else {
+                message.error(data.message || "Error submitting application");
+                notification.error({
+                    message: "Submission Failed",
+                    description: data.message || "Error submitting application. Please try again.",
+                });
+            }
+        } catch (error) {
+            message.error("An error occurred while submitting the application.");
+            console.error("Error:", error);
+        }
+    };
+
 
     const CareerPostData = [
         {
@@ -150,6 +278,24 @@ const Career = () => {
 
 
     ]
+    const handleFileChange = (e) => {
+        const selectedFile = e.file;
+        if (selectedFile) {
+            // Check file type and size
+            const isValidType = ["application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"].includes(selectedFile.type);
+            const isValidSize = selectedFile.size <= 1 * 1024 * 1024;
+
+            if (!isValidType) {
+                message.error("Only PDF or DOCX files are allowed!");
+                setFile(null); // Reset file on invalid type
+            } else if (!isValidSize) {
+                message.error("File size should be under 1MB!");
+                setFile(null); // Reset file on invalid size
+            } else {
+                setFile(selectedFile); // Set valid file
+            }
+        }
+    };
     const openDescriptionModal = (post) => {
         setSelectedPost(post);
         setIsDescriptionModalOpen(true);
@@ -158,11 +304,13 @@ const Career = () => {
     const openApplyModal = () => {
         setIsDescriptionModalOpen(false);
         setIsApplyModalOpen(true);
+
     };
 
     const handleCancel = () => {
         setIsDescriptionModalOpen(false);
         setIsApplyModalOpen(false);
+        form.resetFields();
     };
 
     useEffect(() => {
@@ -210,7 +358,10 @@ const Career = () => {
                     onCancel={handleCancel}
                     width={1000}
                     footer={[
-                        <button className="AnimatedBtnContainer" onClick={openApplyModal} key="apply">Apply Now <MdOutlineArrowRight /></button>
+
+                        <div style={{ display: "flex", justifyContent: "end" }}>
+                            <button className="AnimatedBtnContainer" onClick={openApplyModal} key="apply">Apply Now <MdOutlineArrowRight /></button>
+                        </div>
                     ]}
                     className="ModalContentJob"
                 >
@@ -223,12 +374,14 @@ const Career = () => {
                     footer={null}
                     width={800}
                 >
-                    <Form layout="vertical" initialValues={{}}>
+                    <Form form={form} layout="vertical" onFinish={handleSubmit}>
                         <Form.Item
                             name="firstName"
                             label="First Name"
                             rules={[
                                 { required: true, message: "Please enter your first name!" },
+                                { min: 2, message: "First name must be at least 2 characters!" },
+                                { max: 50, message: "First name cannot exceed 50 characters!" },
                                 { pattern: /^[A-Za-z\s]+$/, message: "First name should only contain letters!" }
                             ]}
                         >
@@ -240,6 +393,8 @@ const Career = () => {
                             label="Last Name"
                             rules={[
                                 { required: true, message: "Please enter your last name!" },
+                                { min: 2, message: "Last name must be at least 2 characters!" },
+                                { max: 50, message: "Last name cannot exceed 50 characters!" },
                                 { pattern: /^[A-Za-z\s]+$/, message: "Last name should only contain letters!" }
                             ]}
                         >
@@ -273,6 +428,8 @@ const Career = () => {
                             label="Highest Qualification"
                             rules={[
                                 { required: true, message: "Please enter your qualification!" },
+                                { min: 2, message: "Qualification must be at least 2 characters!" },
+                                { max: 100, message: "Qualification cannot exceed 100 characters!" },
                                 { pattern: /^[A-Za-z\s]+$/, message: "Qualification should only contain letters!" }
                             ]}
                         >
@@ -284,7 +441,7 @@ const Career = () => {
                             label="Passing Year"
                             rules={[
                                 { required: true, message: "Please enter your passing year!" },
-                                { pattern: /^[0-9]{4}$/, message: "Enter a valid 4-digit year!" }
+                                { pattern: /^(19|20)\d{2}$/, message: "Enter a valid 4-digit year between 1900 and 2099!" }
                             ]}
                         >
                             <Input placeholder="Enter your passing year" maxLength={4} />
@@ -295,10 +452,16 @@ const Career = () => {
                             label="Current CTC (in INR)"
                             rules={[
                                 { required: true, message: "Please enter your current CTC!" },
-                                { pattern: /^[0-9]+$/, message: "CTC should only contain numbers!" }
+                                { pattern: /^[0-9]+$/, message: "CTC should only contain numbers!" },
+                                {
+                                    validator: (_, value) =>
+                                        value && value < 100000000
+                                            ? Promise.resolve()
+                                            : Promise.reject("Enter a realistic CTC (less than 10 Cr)!")
+                                }
                             ]}
                         >
-                            <Input placeholder="Enter your current CTC" />
+                            <Input type="number" placeholder="Enter your current CTC" />
                         </Form.Item>
 
                         <Form.Item
@@ -306,16 +469,25 @@ const Career = () => {
                             label="Expected CTC (in INR)"
                             rules={[
                                 { required: true, message: "Please enter your expected CTC!" },
-                                { pattern: /^[0-9]+$/, message: "CTC should only contain numbers!" }
+                                { pattern: /^[0-9]+$/, message: "CTC should only contain numbers!" },
+                                {
+                                    validator: (_, value) =>
+                                        value && value < 100000000
+                                            ? Promise.resolve()
+                                            : Promise.reject("Enter a realistic expected CTC (less than 10 Cr)!")
+                                }
                             ]}
                         >
-                            <Input placeholder="Enter your expected CTC" />
+                            <Input type="number" placeholder="Enter your expected CTC" />
                         </Form.Item>
 
                         <Form.Item
                             name="permanentAddress"
                             label="Permanent Address"
-                            rules={[{ required: true, message: "Please enter your permanent address!" }]}
+                            rules={[
+                                { required: true, message: "Please enter your permanent address!" },
+                                { min: 10, message: "Address must be at least 10 characters long!" }
+                            ]}
                         >
                             <Input.TextArea placeholder="Enter your permanent address" rows={3} />
                         </Form.Item>
@@ -323,7 +495,10 @@ const Career = () => {
                         <Form.Item
                             name="currentAddress"
                             label="Current Address"
-                            rules={[{ required: true, message: "Please enter your current address!" }]}
+                            rules={[
+                                { required: true, message: "Please enter your current address!" },
+                                { min: 10, message: "Address must be at least 10 characters long!" }
+                            ]}
                         >
                             <Input.TextArea placeholder="Enter your current address" rows={3} />
                         </Form.Item>
@@ -333,49 +508,60 @@ const Career = () => {
                             label="Total Years of Experience in Relevant Job Profile"
                             rules={[
                                 { required: true, message: "Please enter your experience!" },
-                                { pattern: /^[0-9]+$/, message: "Experience should only contain numbers!" }
+                                { pattern: /^[0-9]+$/, message: "Experience should only contain numbers!" },
+                                {
+                                    validator: (_, value) =>
+                                        value >= 0 && value <= 50
+                                            ? Promise.resolve()
+                                            : Promise.reject("Enter a valid experience (0-50 years)!")
+                                }
                             ]}
                         >
-                            <Input placeholder="Enter your total years of experience" />
+                            <Input type="number" placeholder="Enter your total years of experience" />
                         </Form.Item>
 
                         <Form.Item
                             name="noticePeriod"
-                            label="Notice Period with Current Employer"
+                            label="Notice Period with Current Employer (in days)"
                             rules={[
                                 { required: true, message: "Please enter your notice period!" },
-                                { pattern: /^[0-9]+$/, message: "Notice period should only contain numbers!" }
+                                { pattern: /^[0-9]+$/, message: "Notice period should only contain numbers!" },
+                                {
+                                    validator: (_, value) =>
+                                        value >= 0 && value <= 365
+                                            ? Promise.resolve()
+                                            : Promise.reject("Notice period must be between 0 and 365 days!")
+                                }
                             ]}
                         >
-                            <Input placeholder="Enter your notice period" />
+                            <Input type="number" placeholder="Enter your notice period in days" />
                         </Form.Item>
 
                         <Form.Item
                             name="resume"
                             label="Resume (PDF or DOCX only, Max 1MB)"
-                            rules={[
-                                { required: true, message: "Please upload your resume!" },
-                                {
-                                    validator(_, value) {
-                                        if (
-                                            !value ||
-                                            (value.file &&
-                                                ["application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"].includes(value.file.type) &&
-                                                value.file.size <= 1 * 1024 * 1024)
-                                        ) {
-                                            return Promise.resolve();
-                                        }
-                                        return Promise.reject(new Error("Only PDF or DOCX files under 1MB are allowed!"));
-                                    },
-                                },
-                            ]}
+                            rules={[{ required: true, message: "Please upload your resume!" }]}
                         >
-                            <Input type="file" accept=".pdf,.docx" />
+                            <Upload
+                                accept=".pdf,.docx"
+                                beforeUpload={() => false} // Prevent automatic upload
+                                onChange={handleResumeChange}
+                                showUploadList={true}
+                                maxCount={1} // Ensures only one file is uploaded
+                                onRemove={handleResumeRemove}
+                            >
+                                <Button>Click to Upload</Button>
+                            </Upload>
                         </Form.Item>
 
-                        <button className="AnimatedBtnContainer" htmlType="submit">
-                            Submit Application
-                        </button>
+
+                        <div style={{ display: "flex", justifyContent: "end" }}>
+                            <Form.Item>
+                                <Button className="AnimatedBtnContainer" id="AnimatedBtnContainer" htmlType="submit">
+                                    Submit Application
+                                </Button>
+                            </Form.Item>
+                        </div>
                     </Form>
 
                 </Modal>

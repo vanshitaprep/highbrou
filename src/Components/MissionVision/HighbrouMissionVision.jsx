@@ -20,7 +20,7 @@ const HighbrouMissionVision = () => {
                                 <div>
                                     <div>
                                         <div className="MissionContainer" data-aos="fade-up"
-     data-aos-duration="1000">
+                                            data-aos-duration="1000">
                                             <div className="MissionIconContainer">
                                                 <img src="/Images/fluent_target-arrow-20-filled (1).svg" alt="" />
                                             </div>
@@ -30,7 +30,7 @@ const HighbrouMissionVision = () => {
                                             </div>
                                         </div>
                                         <div className="VisionContainer" data-aos="fade-up"
-     data-aos-duration="1500">
+                                            data-aos-duration="1500">
                                             <div className="VisionIconContainer">
                                                 <img src="/Images/humbleicons_bulb (1).svg" alt="" />
                                             </div>

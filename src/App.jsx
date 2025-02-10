@@ -11,11 +11,12 @@ import Career from "./Components/Careers/Carrer";
 import BackToTop from "./Components/BackToTop/BackToTop";
 import Contact from "./Components/Contact/Contact";
 import OurApproach from "./Components/OurApproach/OurApproach";
+import ApplicationView from "./Components/ApplicationView/ApplicationView";
 
 function App() {
   return (
     <Router>
-      <HighbrouNavigation  />
+      <HighbrouNavigation />
       <Routes>
         <Route path="/" element={<HomeRoutes />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -24,9 +25,10 @@ function App() {
         <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/our-approach" element={<OurApproach />} />
+        <Route path="/highbrouapplicationView" element={<ApplicationView />} />
       </Routes>
       <Footer />
-      <BackToTop/>
+      <BackToTop />
     </Router>
   );
 }
