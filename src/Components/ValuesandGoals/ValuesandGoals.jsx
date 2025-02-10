@@ -18,7 +18,7 @@ const ValuesandGoals = () => {
                         </div>
                         <div className="StickyCards">
                             <div data-aos="fade-up"
-     data-aos-duration="1000">
+                                data-aos-duration="1000">
                                 <div className="BlackOverlayColor">
 
                                 </div>
@@ -31,7 +31,7 @@ const ValuesandGoals = () => {
                                         </p>
                                         <p><b>Quality:</b> Excellence is non-negotiable; we prioritize accuracy and attention to detail in every design.</p>
                                         <p><b>Client-Centricity:</b> Our clients’ needs guide our approach, from initial concept to project completion.</p>
-                                        <p><b>Sustainability</b> We design structures that stand the test of time while considering environmental impact and resource efficiency.</p>
+                                        <p><b>Sustainability:</b> We design structures that stand the test of time while considering environmental impact and resource efficiency.</p>
                                     </div>
                                 </div>
                             </div>

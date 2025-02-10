@@ -13,7 +13,7 @@ const WhatWeDoCardsData = [
         descriptionDetails: <>
             <div>
                 <p>Need Comprehensive Structural Solutions from Inception to Construction?</p>
-                <p>We covers the full spectrum, including:</p>
+                {/* <p>We covers the full spectrum, including:</p> */}
                 <ul>
                     <li>Pre-bidding calculations and detailed structural reports</li>
                     <li>Setting out & formwork drawings</li>
@@ -31,7 +31,7 @@ const WhatWeDoCardsData = [
         descriptionDetails: <>
             <div>
                 <p>Ever felt the need for a second set of expert eyes on your project?</p>
-                <p><b>Our Peer Review Service ensures :</b></p>
+                {/* <p><b>Our Peer Review Service ensures :</b></p> */}
                 <ul>
                     <li>Critical evaluation of structural design models, documents, and drawings</li>
                     <li>Identifying strengths, weaknesses, and opportunities for enhancement</li>
@@ -46,7 +46,7 @@ const WhatWeDoCardsData = [
         descriptionDetails: <>
             <div>
                 <p>Want to Optimize Costs without compromising quality?</p>
-                <p><b>Our Value Engineering service employs:</b></p>
+                {/* <p><b>Our Value Engineering service employs:</b></p> */}
                 <ul>
                     <li>Innovative strategies for cost optimization</li>
                     <li>Enhancing structural performance</li>

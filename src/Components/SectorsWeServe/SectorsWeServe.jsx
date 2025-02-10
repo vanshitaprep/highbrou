@@ -13,32 +13,32 @@ const SectorsWeServe = () => {
         {
             title: "BUILDING EXCELLENCE",
             icon:BUILDINGEXCELLENCE,
-            tagline: "From residences to high-rise commercial structures"
+            tagline: "From residences to high-rise commercial structures."
         },
         {
             title: "INDUSTRIAL FACILITY",
             icon:INDUSTRIALFACILITY,
-            tagline: "Structuring spaces for optimized industrial operations"
+            tagline: "Structuring spaces for optimized industrial operations."
         },
         {
             title: "PRE-ENGINEERED METAL BUILDING",
             icon:METALBUILDING,
-            tagline: "Modern and efficient modular designer"
+            tagline: "Modern and efficient modular designer."
         },
         {
             title: "CONNECTING THE WORLD",
             icon:CONNECTINGTHEWORLD,
-            tagline: "Infrastructure that supports essential energy services"
+            tagline: "Infrastructure that supports essential energy services."
         },
         {
             title: "OIL AND GAS EXCELLENCE",
             icon:OILANDGASEXCELLENCE,
-            tagline: "From residential to high-rise commercial structures"
+            tagline: "From residential to high-rise commercial structures."
         },
         {
             title: "QUALITY RESOURCING",
             icon:QUALITYRESOURCING,
-            tagline: "The tiny ship today stiller",
+            tagline: "The tiny ship today stiller.",
         }
     ]
     return (

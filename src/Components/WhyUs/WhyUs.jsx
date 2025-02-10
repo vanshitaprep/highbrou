@@ -45,7 +45,7 @@ const WhyUs = () => {
         { title: "PROJECT COMPLETED", value: 100, suffix: "+" },
         { title: "CLIENT SATISFACTION", value: 98, suffix: "%" },
         { title: "YEARS OF INNOVATION", value: 10, suffix: "+" },
-        { title: "SQFT OF STRUCTURES DELIVERED", value: 1, suffix: "cr+" },
+        { title: "sq.ft OF STRUCTURES DELIVERED", value: 1, suffix: "cr+" },
     ];
 
     return (
@@ -65,7 +65,7 @@ const WhyUs = () => {
                                         <img src={pattern} alt="" />
                                     </div>
                                     <span>WHY CHOOSE US?</span>
-                                    <h2>WHY CHOOSE US?</h2>
+                                    {/* <h2>WHY CHOOSE US?</h2> */}
                                     <p>
                                         Over a decade of expertise, a portfolio of complex projects,
                                         and a commitment to excellence.
