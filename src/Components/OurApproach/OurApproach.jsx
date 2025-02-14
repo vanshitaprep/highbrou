@@ -41,7 +41,7 @@ const OurApproach = () => {
 
                         </div>
                     </div>
-                    <img src={OurApprochMobile} alt="" className="OnlyMobile" style={{width:"100%"}}/>
+                    <img src={OurApprochMobile} alt="" className="OnlyMobile" style={{ width: "100%" }} />
                 </div>
             </section>
         </>

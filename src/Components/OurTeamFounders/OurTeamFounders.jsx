@@ -12,15 +12,16 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
+import ShaikhIsmail from "./ShaikhIsmail.JPG"
+import ShaikhKashif1 from "./ShaikhKashif1.jpg"
 const OurTeamFounders = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
-    const [selectedFounder, setSelectedFounder] = useState(null); // Selected founder details
-
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedPerson, setSelectedPerson] = useState(null);
     const FoundersData = [
         {
             memberName: "SAYYAD WAJED ALI",
             position: "Director",
-            tagline: "Structural Engineer with 10+ years of expertise in high-rises and infrastructure.",
+            tagline: "Structural engineer with over 10+ years of experience specializing in high-rise buildings and infrastructure projects.",
             image: "/Images/team1.webp",
             qualificationDetails: (
                 <div>
@@ -35,7 +36,7 @@ const OurTeamFounders = () => {
         {
             memberName: "SARFARAZ SHAIKH",
             position: "Associate Director",
-            tagline: "Experienced MEP consultant with 20+ years in the industry, successfully delivering 200+ projects across sectors.",
+            tagline: "Experienced engineering consultant with 20+ years in the industry, successfully delivering 200+ projects across sectors.",
             image: "/Images/team2.webp",
             qualificationDetails: (
                 <div>
@@ -50,46 +51,40 @@ const OurTeamFounders = () => {
         },
     ];
 
-    const showModal = (founder) => {
-        setSelectedFounder(founder); // Set the selected founder details
-        setIsModalOpen(true); // Open modal
+    const showModal = (person) => {
+        setSelectedPerson(person);
+        setIsModalOpen(true);
     };
 
     const handleCloseModal = () => {
-        setIsModalOpen(false); // Close modal
-        setSelectedFounder(null); // Clear selected founder details
+        setIsModalOpen(false);
+        setSelectedPerson(null);
     };
 
     const InverstorsDetails = [
         {
-            image: "",
-            name: "Investors Name",
+            image: "/Images/team1.webp",
+            name: "SAYYAD WAJED ALI",
+            details: <>
+                <p>Sayyad Wajed Ali, a Civil Engineering graduate from Dr. BAMU University, brings over 10 years of expertise in high-rise structures and infrastructure. As a Board of Director, he plays a key role in driving innovation and engineering excellence in the company.</p>
+            </>
         },
         {
-            image: "",
-            name: "Investors Name",
+            image: ShaikhIsmail,
+            name: "Shaikh Ismail",
+            details: <>
+                <p>An accounting graduate with extensive experience in real estate transactions, Ismail specializes in financial planning, resource management, and project funding. His expertise in cost structuring and financial optimization ensures seamless execution of large-scale structural engineering projects.</p>
+            </>
         },
         {
-            image: "",
-            name: "Investors Name",
+            image: ShaikhKashif1,
+            name: "Shaikh Mohammed Kashif",
+            details: <>
+                <p>A business graduate with a strong background in real estate development, Kashif brings strategic insights into land acquisition, project feasibility, and planning. His knowledge of market dynamics and infrastructure expansion plays a crucial role in the firm’s growth in the structural engineering sector.</p>
+            </>
         },
-        {
-            image: "",
-            name: "Investors Name",
-        },
-        {
-            image: "",
-            name: "Investors Name",
-        },
-        {
-            image: "",
-            name: "Investors Name",
-        },
-        {
-            image: "",
-            name: "Investors Name",
-        }
     ]
+
     return (
         <>
             <section>
@@ -164,7 +159,7 @@ const OurTeamFounders = () => {
                                         <div className="InverstorsTeamContainerContent">
                                             <div>
                                                 <h2>Board of Directors</h2>
-                                                <p>We’re on the lookout for passionate, forward-thinking individuals who are eager to make an impact.</p>
+                                                <p>We seek visionary and dynamic individuals who are driven to create a lasting impact and contribute to our growth and innovation.</p>
                                             </div>
                                         </div>
                                     </Col>
@@ -188,10 +183,10 @@ const OurTeamFounders = () => {
                                             >
                                                 {InverstorsDetails.map((item, index) => (
                                                     <SwiperSlide key={index}>
-                                                        <div className="InvestorsCardFormat">
+                                                        <div className="InvestorsCardFormat" onClick={() => showModal(item)} style={{ cursor: "pointer" }}>
                                                             <div>
                                                                 <div className="InvestorImage">
-                                                                    <img src="https://plus.unsplash.com/premium_photo-1683134127869-a0aa8f8db043?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                                                                    <img src={item.image} alt="" />
                                                                 </div>
                                                                 <div className="InvestorsNameAndContent">
                                                                     <h2>{item.name}</h2>
@@ -216,24 +211,23 @@ const OurTeamFounders = () => {
 
                 {/* Ant Design Modal */}
                 <Modal
-                    title={selectedFounder?.memberName}
+                    title={selectedPerson?.name || selectedPerson?.memberName}
                     open={isModalOpen}
                     onCancel={handleCloseModal}
                     footer={null}
                     width={500}
                 >
-                    {selectedFounder && (
+                    {selectedPerson && (
                         <>
-                            {/* <h3>{selectedFounder.position}</h3> */}
                             <div className="ModalImageContainer">
                                 <img
-                                    src={selectedFounder.image}
-                                    alt={selectedFounder.memberName}
+                                    src={selectedPerson.image}
+                                    alt={selectedPerson.name || selectedPerson.memberName}
                                     className="ModalFounderImage"
                                 />
                             </div>
                             <div className="ModalDetails">
-                                {selectedFounder.qualificationDetails}
+                                {selectedPerson.details || selectedPerson.qualificationDetails}
                             </div>
                         </>
                     )}
