@@ -5,6 +5,7 @@ import RAPIDDELIVERY from "./RAPIDDELIVERY.jpeg"
 import CUTTINGEDGEDESIGN from "./CUTTINGEDGEDESIGN.jpg"
 import PRECISIONENGINEERING from "./PRECISIONENGINEERING.jpg"
 import SUSTAINABLESOLUTIONS from "./SUSTAINABLESOLUTIONS.jpeg"
+import Pioneering from "./Pioneering3.jpg"
 const Expertise = () => {
 
     const ExpertiseData = [
@@ -15,7 +16,7 @@ const Expertise = () => {
         },
         {
             title: "PRECISION ENGINEERING",
-            image: PRECISIONENGINEERING,
+            image: Pioneering,
             tagline: "We deliver accuracy down to the millimeter, ensuring perfect execution every time."
         },
         {

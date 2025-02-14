@@ -97,7 +97,7 @@ const OurTeamFounders = () => {
                     <div className="sectionPadding">
                         <div className="OurTeamFoundersContentHeader">
                             <span> &nbsp;Guided by Expertise, Driven by Passion.</span>
-                            <h2>Our Founders</h2>
+                            <h2>Our Leaders</h2>
                         </div>
                         <div className="FoundersAnimatedCards">
                             {/* <Row>
