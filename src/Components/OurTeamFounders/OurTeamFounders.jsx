@@ -80,9 +80,10 @@ const OurTeamFounders = () => {
             image: ShaikhKashif1,
             name: "Shaikh Mohammed Kashif",
             details: <>
-                <p>A business graduate with a strong background in real estate development, Kashif brings strategic insights into land acquisition, project feasibility, and planning. His knowledge of market dynamics and infrastructure expansion plays a crucial role in the firm’s growth in the structural engineering sector.</p>
+                <p>A business graduate with a deep understanding of operational strategy and corporate growth, Kashif excels in business development, market expansion, and strategic partnerships. His expertise in optimizing workflows, streamlining processes, and driving efficiency contributes to the company's continued success in the engineering and manufacturing sectors.</p>
             </>
         },
+
     ]
 
     return (
