@@ -99,14 +99,12 @@ const OurTeamFounders = () => {
       details: (
         <>
           <p>
-            Ismail is experienced professionals in the real estate
-            sector, specializing in land acquisition, sales, and small-scale
-            real estate developments. With a strong academic background—Ismail
-            holding a degree in accounting and Kashif in business—they bring
-            extensive knowledge and expertise to real estate dealings. Their
-            proficiency in financial planning, cost structuring, and project
-            funding ensures smooth and strategic execution of property
-            transactions and developments.
+            With a strong background in finance and extensive experience in real
+            estate investments and project development, Mr. Shaikh Ismail plays
+            a pivotal role in strategic decision-making and business expansion
+            at Highbrou Engineering. His expertise in financial planning and
+            asset management contributes to the firm's sustainable growth and
+            ability to undertake large-scale projects.
           </p>
         </>
       ),
@@ -117,12 +115,12 @@ const OurTeamFounders = () => {
       details: (
         <>
           <p>
-            A business graduate with a deep understanding of operational
-            strategy and corporate growth, Kashif excels in business
-            development, market expansion, and strategic partnerships. His
-            expertise in optimizing workflows, streamlining processes, and
-            driving efficiency contributes to the company's continued success in
-            the engineering and manufacturing sectors.
+            A business graduate with a deep understanding of real estate markets
+            and development strategies, Mr. Mohammed Kashif brings valuable
+            industry insights that help shape Highbrou Engineering's vision. His
+            experience in land acquisitions, project feasibility, and market
+            dynamics strengthens the firm's ability to align engineering
+            solutions with real-world development challenges.
           </p>
         </>
       ),
@@ -212,9 +210,10 @@ const OurTeamFounders = () => {
                       <div>
                         <h2>Board of Directors</h2>
                         <p>
-                          We seek visionary and dynamic individuals who are
-                          driven to create a lasting impact and contribute to
-                          our growth and innovation.
+                          At Highbrou Engineering, our leadership team brings
+                          together expertise in structural engineering, project
+                          development, and strategic growth, ensuring innovative
+                          and technically sound solutions for our clients.
                         </p>
                       </div>
                     </div>

@@ -37,7 +37,7 @@ const TimeLineAnimatedComponent = () => {
         },
         {
             title: "2024 – Incorporation & Expansion",
-            description: 'Incorporated as "Highbrou Engineering Private Limited" and expanded services to international markets.'
+            description: 'Incorporated as "Highbrou Engineering Pvt Ltd" and expanded services to international markets.'
         },
         {
             title: "2025 – Industry Leadership",
